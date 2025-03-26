@@ -5526,6 +5526,7 @@
         function headerScroll() {
             addWindowScrollEvent = true;
             const header = document.querySelector("header.header");
+            const headerCatalog = document.querySelector(".catalog-header");
             const headerShow = header.hasAttribute("data-scroll-show");
             const headerShowTimer = header.dataset.scrollShow ? header.dataset.scrollShow : 500;
             const startPoint = header.dataset.scroll ? header.dataset.scroll : 1;
@@ -5535,17 +5536,23 @@
                 const scrollTop = window.scrollY;
                 clearTimeout(timer);
                 if (scrollTop >= startPoint) {
-                    !header.classList.contains("_header-scroll") ? header.classList.add("_header-scroll") : null;
-                    !header.classList.contains("_header-show") ? header.classList.add("_header-show") : null;
+                    if (!header.classList.contains("_header-scroll")) {
+                        header.classList.add("_header-scroll");
+                        if (headerCatalog) headerCatalog.style.cssText = "bottom: 17%;";
+                    }
+                    if (!header.classList.contains("_header-show")) header.classList.add("_header-show");
                     if (headerShow) {
-                        if (scrollTop > scrollDirection) ; else !header.classList.contains("_header-show") ? header.classList.add("_header-show") : null;
+                        if (scrollTop > scrollDirection) ; else if (!header.classList.contains("_header-show")) header.classList.add("_header-show");
                         timer = setTimeout((() => {
-                            !header.classList.contains("_header-show") ? header.classList.add("_header-show") : null;
+                            if (!header.classList.contains("_header-show")) header.classList.add("_header-show");
                         }), headerShowTimer);
                     }
                 } else {
-                    header.classList.contains("_header-scroll") ? header.classList.remove("_header-scroll") : null;
-                    if (headerShow) header.classList.contains("_header-show") ? header.classList.remove("_header-show") : null;
+                    if (header.classList.contains("_header-scroll")) {
+                        header.classList.remove("_header-scroll");
+                        if (headerCatalog) headerCatalog.style.cssText = "bottom: 11%;";
+                    }
+                    if (headerShow) if (header.classList.contains("_header-show")) header.classList.remove("_header-show");
                 }
                 scrollDirection = scrollTop <= 0 ? 0 : scrollTop;
             }));
@@ -7417,6 +7424,32 @@ PERFORMANCE OF THIS SOFTWARE.
         function documentActions(e) {
             const targetElement = e.target;
             const catalogList = document.querySelector(".catalog-header");
+            let catalogHoverTimer;
+            const isCursorOverCatalog = () => catalogList.matches(":hover") || document.querySelector(".header__catalog").matches(":hover") || document.querySelector(".catalog-header__menu").matches(":hover") || document.querySelector(".catalog-header__sub-menu").matches(":hover");
+            const handleCatalogHover = show => {
+                clearTimeout(catalogHoverTimer);
+                if (show) {
+                    document.documentElement.classList.add("lock");
+                    catalogList.classList.add("catalog-menu-open");
+                    document.documentElement.classList.add("body-catalog-open");
+                    document.documentElement.classList.add("menu-open");
+                } else catalogHoverTimer = setTimeout((() => {
+                    if (!isCursorOverCatalog()) closeCatalog();
+                }), 300);
+            };
+            const closeCatalog = () => {
+                catalogList.classList.remove("catalog-menu-open");
+                document.documentElement.classList.remove("body-catalog-open");
+                document.documentElement.classList.remove("menu-open");
+                document.documentElement.classList.remove("lock");
+                document.documentElement.classList.remove("sub-menu-open");
+                document.querySelectorAll("._sub-menu-active").forEach((activeLink => {
+                    activeLink.classList.remove("_sub-menu-active");
+                }));
+                document.querySelectorAll("._sub-menu-open").forEach((activeBlock => {
+                    activeBlock.classList.remove("_sub-menu-open");
+                }));
+            };
             if (targetElement.closest("[data-parent]")) {
                 const subMenuId = targetElement.dataset.parent ? targetElement.dataset.parent : null;
                 const subMenu = document.querySelector(`[data-submenu="${subMenuId}"]`);
@@ -7434,19 +7467,39 @@ PERFORMANCE OF THIS SOFTWARE.
                 } else console.log("Ой ой, нет такого подменю :(");
                 e.preventDefault();
             }
-            if (targetElement.closest(".header__catalog")) {
-                if (catalogList) {
-                    document.documentElement.classList.toggle("lock");
-                    if (catalogList.classList.contains("catalog-menu-open")) {
-                        catalogList.classList.remove("catalog-menu-open");
-                        document.documentElement.classList.remove("body-catalog-open");
-                    } else {
-                        catalogList.classList.add("catalog-menu-open");
-                        document.documentElement.classList.add("body-catalog-open");
-                        document.documentElement.classList.add("menu-open");
-                    }
-                }
+            if (targetElement.closest(".menu-catalog__back") || targetElement.closest(".sub-menu-catalog__back")) {
+                document.documentElement.classList.remove("sub-menu-open");
+                document.querySelectorAll("._sub-menu-active").forEach((activeLink => {
+                    activeLink.classList.remove("_sub-menu-active");
+                }));
+                document.querySelectorAll("._sub-menu-open").forEach((activeBlock => {
+                    activeBlock.classList.remove("_sub-menu-open");
+                }));
                 e.preventDefault();
+            }
+            const catalogButton = document.querySelector(".header__catalog");
+            if (catalogButton && catalogList) {
+                if (window.matchMedia("(min-width: 992px)").matches) {
+                    catalogButton.addEventListener("mouseenter", (() => handleCatalogHover(true)));
+                    catalogButton.addEventListener("mouseleave", (() => handleCatalogHover(false)));
+                    catalogList.addEventListener("mouseenter", (() => clearTimeout(catalogHoverTimer)));
+                    catalogList.addEventListener("mouseleave", (() => handleCatalogHover(false)));
+                    const menu = document.querySelector(".catalog-header__menu");
+                    const subMenu = document.querySelector(".catalog-header__sub-menu");
+                    if (menu) menu.addEventListener("mouseleave", (() => handleCatalogHover(false)));
+                    if (subMenu) subMenu.addEventListener("mouseleave", (() => handleCatalogHover(false)));
+                }
+                if (targetElement.closest(".header__catalog")) {
+                    if (window.matchMedia("(max-width: 991px)").matches) {
+                        document.documentElement.classList.toggle("lock");
+                        if (catalogList.classList.contains("catalog-menu-open")) closeCatalog(); else {
+                            catalogList.classList.add("catalog-menu-open");
+                            document.documentElement.classList.add("body-catalog-open");
+                            document.documentElement.classList.add("menu-open");
+                        }
+                    }
+                    e.preventDefault();
+                }
             }
             if (targetElement.closest(".button-menu-phone")) {
                 document.documentElement.classList.toggle("body-catalog-open");
@@ -7463,25 +7516,68 @@ PERFORMANCE OF THIS SOFTWARE.
                 targetElement.classList.add("active-menu-phone");
                 e.preventDefault();
             }
-            const targetElementMenu = e.target.closest(".menu-phone__button");
-            if (targetElementMenu) {
-                const buttons = document.querySelectorAll(".menu-phone__button");
-                buttons.forEach((button => {
-                    button.classList.remove("active-menu-phone");
-                }));
-                targetElementMenu.classList.toggle("active-menu-phone");
-            }
-            if (targetElement.closest(".sub-menu-catalog__back")) {
-                document.documentElement.classList.remove("sub-menu-open");
-                document.querySelectorAll("._sub-menu-active").forEach((activeLink => {
-                    activeLink.classList.remove("_sub-menu-active");
-                }));
-                document.querySelectorAll("._sub-menu-open").forEach((activeBlock => {
-                    activeBlock.classList.remove("_sub-menu-open");
-                }));
-                e.preventDefault();
-            }
+            document.addEventListener("click", (e => {
+                if (window.matchMedia("(max-width: 991px)").matches && !e.target.closest(".header__catalog") && !e.target.closest(".catalog-header") && !e.target.closest(".button-menu-phone")) if (catalogList.classList.contains("catalog-menu-open")) closeCatalog();
+            }));
         }
+        document.addEventListener("DOMContentLoaded", (() => {
+            const catalogButton = document.querySelector(".header__catalog");
+            const catalogList = document.querySelector(".catalog-header");
+            if (catalogButton && catalogList) if (window.matchMedia("(min-width: 992px)").matches) {
+                let catalogHoverTimer;
+                catalogButton.addEventListener("mouseenter", (() => {
+                    document.documentElement.classList.add("lock");
+                    catalogList.classList.add("catalog-menu-open");
+                    document.documentElement.classList.add("body-catalog-open");
+                    document.documentElement.classList.add("menu-open");
+                }));
+                catalogButton.addEventListener("mouseleave", (() => {
+                    catalogHoverTimer = setTimeout((() => {
+                        if (!catalogList.matches(":hover") && !document.querySelector(".catalog-header__menu").matches(":hover") && !document.querySelector(".catalog-header__sub-menu").matches(":hover")) {
+                            catalogList.classList.remove("catalog-menu-open");
+                            document.documentElement.classList.remove("body-catalog-open");
+                            document.documentElement.classList.remove("menu-open");
+                            document.documentElement.classList.remove("lock");
+                        }
+                    }), 300);
+                }));
+                catalogList.addEventListener("mouseenter", (() => {
+                    clearTimeout(catalogHoverTimer);
+                }));
+                catalogList.addEventListener("mouseleave", (() => {
+                    catalogHoverTimer = setTimeout((() => {
+                        if (!catalogButton.matches(":hover")) {
+                            catalogList.classList.remove("catalog-menu-open");
+                            document.documentElement.classList.remove("body-catalog-open");
+                            document.documentElement.classList.remove("menu-open");
+                            document.documentElement.classList.remove("lock");
+                        }
+                    }), 300);
+                }));
+                const menu = document.querySelector(".catalog-header__menu");
+                const subMenu = document.querySelector(".catalog-header__sub-menu");
+                if (menu) menu.addEventListener("mouseleave", (() => {
+                    catalogHoverTimer = setTimeout((() => {
+                        if (!catalogButton.matches(":hover") && !catalogList.matches(":hover") && !subMenu.matches(":hover")) {
+                            catalogList.classList.remove("catalog-menu-open");
+                            document.documentElement.classList.remove("body-catalog-open");
+                            document.documentElement.classList.remove("menu-open");
+                            document.documentElement.classList.remove("lock");
+                        }
+                    }), 300);
+                }));
+                if (subMenu) subMenu.addEventListener("mouseleave", (() => {
+                    catalogHoverTimer = setTimeout((() => {
+                        if (!catalogButton.matches(":hover") && !catalogList.matches(":hover") && !menu.matches(":hover")) {
+                            catalogList.classList.remove("catalog-menu-open");
+                            document.documentElement.classList.remove("body-catalog-open");
+                            document.documentElement.classList.remove("menu-open");
+                            document.documentElement.classList.remove("lock");
+                        }
+                    }), 300);
+                }));
+            }
+        }));
         document.addEventListener("DOMContentLoaded", (function() {
             const catalogItems = document.querySelectorAll(".catalog-header__item button[data-parent]");
             document.querySelector(".catalog-header__sub-menu");
