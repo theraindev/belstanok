@@ -449,22 +449,43 @@
                     }));
                 }));
             }
-            function initTabs() {
-                const tabsContainers = document.querySelectorAll("[data-tabs]");
-                tabsContainers.forEach((container => {
-                    const titles = container.querySelectorAll("[data-tabs-title]");
-                    const contents = container.querySelectorAll("[data-tabs-item]");
-                    if (titles.length > 0 && contents.length > 0) contents[0].hidden = false;
-                    titles.forEach(((title, index) => {
-                        title.addEventListener("click", (() => {
-                            titles.forEach((t => t.classList.remove("_tab-active")));
-                            contents.forEach((c => c.hidden = true));
-                            title.classList.add("_tab-active");
-                            contents[index].hidden = false;
-                            contents[index].style.animation = "fadeIn 0.3s ease";
+            function initTabs(tabsBlock = null) {
+                if (tabsBlock) {
+                    const tabsBlockIndex = tabsBlock.dataset.tabsIndex;
+                    const tabsActiveHashBlock = tabsActiveHash[0] == tabsBlockIndex;
+                    let tabsTitles = tabsBlock.querySelectorAll("[data-tabs-titles]>*");
+                    let tabsContent = tabsBlock.querySelectorAll("[data-tabs-body]>*");
+                    if (tabsActiveHashBlock) {
+                        const tabsActiveTitle = tabsBlock.querySelector("[data-tabs-titles]>._tab-active");
+                        tabsActiveTitle?.classList.remove("_tab-active");
+                    }
+                    if (tabsContent.length) {
+                        tabsContent = Array.from(tabsContent).filter((item => item.closest("[data-tabs]") === tabsBlock));
+                        tabsTitles = Array.from(tabsTitles).filter((item => item.closest("[data-tabs]") === tabsBlock));
+                        tabsContent.forEach(((tabsContentItem, index) => {
+                            tabsTitles[index].setAttribute("data-tabs-title", "");
+                            tabsContentItem.setAttribute("data-tabs-item", "");
+                            if (tabsActiveHashBlock && index == tabsActiveHash[1]) tabsTitles[index].classList.add("_tab-active");
+                            tabsContentItem.hidden = !tabsTitles[index].classList.contains("_tab-active");
+                        }));
+                    }
+                } else {
+                    const tabsContainers = document.querySelectorAll("[data-tabs]");
+                    tabsContainers.forEach((container => {
+                        const titles = container.querySelectorAll("[data-tabs-title]");
+                        const contents = container.querySelectorAll("[data-tabs-item]");
+                        if (titles.length > 0 && contents.length > 0) contents[0].hidden = false;
+                        titles.forEach(((title, index) => {
+                            title.addEventListener("click", (() => {
+                                titles.forEach((t => t.classList.remove("_tab-active")));
+                                contents.forEach((c => c.hidden = true));
+                                title.classList.add("_tab-active");
+                                contents[index].hidden = false;
+                                contents[index].style.animation = "fadeIn 0.3s ease";
+                            }));
                         }));
                     }));
-                }));
+                }
             }
             function setTabsStatus(tabsBlock) {
                 let tabsTitles = tabsBlock.querySelectorAll("[data-tabs-title]");
@@ -558,6 +579,18 @@
                 }
             }
         }
+        document.addEventListener("DOMContentLoaded", (function() {
+            const accordionButtons = document.querySelectorAll(".accordion-button");
+            accordionButtons.forEach((button => {
+                button.addEventListener("click", (function() {
+                    const content = this.nextElementSibling;
+                    const icon = this.querySelector(".accordion-icon");
+                    content.classList.toggle("active");
+                    button.classList.toggle("active");
+                    if (content.classList.contains("active")) icon.textContent = "−"; else icon.textContent = "+";
+                }));
+            }));
+        }));
         class Popup {
             constructor(options) {
                 let config = {

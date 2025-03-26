@@ -9041,6 +9041,16 @@ body::after {
   font-size: 1.5rem;
   color: #ffffff;
 }
+.similar-products__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(12.5rem, 1fr));
+  gap: 15px;
+}
+@media (max-width: 47.99875em) {
+  .similar-products__grid {
+    grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr));
+  }
+}
 
 @media (min-width: 75em) {
   .car {
@@ -12076,6 +12086,60 @@ body::after {
   .products__quantity {
     font-size: 0.75rem;
   }
+}
+/* Базовые стили аккордеона */
+.products__categories-accordion {
+  border: 1px solid #e0e0e0; /* Пример границы, подстройте под ваш дизайн */
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.accordion-button {
+  width: 100%;
+  padding: 15px 20px;
+  text-align: left;
+  background: #f8f8f8; /* Цвет фона заголовка */
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px; /* Размер шрифта как в вашем проекте */
+  font-weight: 600;
+}
+
+.accordion-icon {
+  font-size: 20px;
+  transition: transform 0.3s;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  background: #fff; /* Цвет фона контента */
+}
+
+.accordion-content.active {
+  max-height: 500px; /* Достаточно для отображения всех ссылок */
+}
+
+.accordion-content.active + .accordion-button,
+.accordion-button.active { /* На всякий случай, если добавите класс через JS */
+  background: rgb(0, 149, 255);
+  color: white;
+}
+
+.products__quantity {
+  display: block;
+  padding: 10px 20px;
+  color: #333; /* Цвет текста */
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.products__quantity:hover {
+  background: #f0f0f0; /* Эффект при наведении */
 }
 /**
  * Swiper 7.2.0
