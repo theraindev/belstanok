@@ -5027,6 +5027,12 @@
                 })
             });
         }
+        document.addEventListener("touchstart", (function(e) {
+            if (e.target.closest(".swiper")) e.preventDefault();
+            if (e.target.closest(".swiper-wrapper")) e.preventDefault();
+        }), {
+            passive: false
+        });
         function initSliders() {
             if (document.querySelector(".advertising__slider")) new core(".advertising__slider", {
                 modules: [ Navigation, Pagination, Autoplay, EffectFade, Scrollbar ],
@@ -5256,7 +5262,7 @@
                 modules: [ Navigation, Pagination ],
                 observer: true,
                 observeParents: true,
-                slidesPerView: 2,
+                slidesPerView: 1.3,
                 spaceBetween: 10,
                 autoHeight: true,
                 speed: 800,
@@ -5269,16 +5275,16 @@
                     nextEl: ".similar-swiper-button-next"
                 },
                 breakpoints: {
-                    1200: {
+                    600: {
                         slidesPerView: 5
                     },
-                    992: {
+                    486: {
                         slidesPerView: 4
                     },
-                    768: {
+                    384: {
                         slidesPerView: 3
                     },
-                    576: {
+                    288: {
                         slidesPerView: 2
                     },
                     0: {
