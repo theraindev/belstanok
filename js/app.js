@@ -5061,14 +5061,25 @@
             });
         }
         document.addEventListener("touchstart", (function(e) {
-            if (e.target.closest(".swiper")) e.preventDefault();
-            if (e.target.closest(".swiper-wrapper")) e.preventDefault();
+            const swiperElement = e.target.closest(".swiper");
+            if (swiperElement) {
+                const swiperInstance = swiperElement.swiper;
+                if (swiperInstance && !swiperInstance.allowTouchMove) e.preventDefault();
+            }
         }), {
             passive: false
         });
         function initSliders() {
             if (document.querySelector(".advertising__slider")) new core(".advertising__slider", {
                 modules: [ Navigation, Pagination, Autoplay, EffectFade, Scrollbar ],
+                touchReleaseOnEdges: true,
+                edgeSwipeDetection: true,
+                edgeSwipeThreshold: 20,
+                on: {
+                    touchStart: function(swiper, e) {
+                        if (swiper.isBeginning || swiper.isEnd) swiper.allowTouchMove = false; else swiper.allowTouchMove = true;
+                    }
+                },
                 observer: true,
                 observeParents: true,
                 slidesPerView: 1,
@@ -5089,6 +5100,9 @@
             });
             if (document.querySelector(".popular__slider")) new core(".popular__slider", {
                 modules: [ Navigation, Pagination ],
+                touchReleaseOnEdges: true,
+                edgeSwipeDetection: true,
+                edgeSwipeThreshold: 20,
                 observer: true,
                 observeParents: true,
                 slidesPerView: 2,
@@ -5121,6 +5135,9 @@
             });
             if (document.querySelector(".new__slider")) new core(".new__slider:not(.not)", {
                 modules: [ Navigation, Pagination ],
+                touchReleaseOnEdges: true,
+                edgeSwipeDetection: true,
+                edgeSwipeThreshold: 20,
                 observer: true,
                 observeParents: true,
                 slidesPerView: 2,
@@ -5153,6 +5170,9 @@
             });
             if (document.querySelector(".action__slider")) new core(".action__slider", {
                 modules: [ Navigation, Pagination ],
+                touchReleaseOnEdges: true,
+                edgeSwipeDetection: true,
+                edgeSwipeThreshold: 20,
                 observer: true,
                 observeParents: true,
                 slidesPerView: 2,
@@ -5185,6 +5205,9 @@
             });
             if (document.querySelector(".stock__slider")) new core(".stock__slider", {
                 modules: [ Navigation, Pagination ],
+                touchReleaseOnEdges: true,
+                edgeSwipeDetection: true,
+                edgeSwipeThreshold: 20,
                 observer: true,
                 observeParents: true,
                 slidesPerView: 2,
@@ -5217,6 +5240,9 @@
             });
             if (document.querySelector(".reviews__slider")) new core(".reviews__slider", {
                 modules: [ Pagination ],
+                touchReleaseOnEdges: true,
+                edgeSwipeDetection: true,
+                edgeSwipeThreshold: 20,
                 observer: true,
                 observeParents: true,
                 slidesPerView: 1,
@@ -5250,6 +5276,14 @@
             if (document.querySelector(".slider__images .swiper-container")) {
                 const sliderThumbs = new core(".slider__thumbs .swiper-container", {
                     modules: [ Navigation, Thumb ],
+                    touchReleaseOnEdges: true,
+                    edgeSwipeDetection: true,
+                    edgeSwipeThreshold: 20,
+                    on: {
+                        touchStart: function(swiper, e) {
+                            if (swiper.isBeginning || swiper.isEnd) swiper.allowTouchMove = false; else swiper.allowTouchMove = true;
+                        }
+                    },
                     direction: "vertical",
                     slidesPerView: 3,
                     spaceBetween: 24,
@@ -5269,6 +5303,14 @@
                 });
                 new core(".slider__images .swiper-container", {
                     modules: [ Navigation, Thumb, Mousewheel ],
+                    touchReleaseOnEdges: true,
+                    edgeSwipeDetection: true,
+                    edgeSwipeThreshold: 20,
+                    on: {
+                        touchStart: function(swiper, e) {
+                            if (swiper.isBeginning || swiper.isEnd) swiper.allowTouchMove = false; else swiper.allowTouchMove = true;
+                        }
+                    },
                     direction: "vertical",
                     slidesPerView: 1,
                     spaceBetween: 32,
@@ -5293,6 +5335,9 @@
             }
             if (document.querySelector(".similar-products__slider")) new core(".similar-products__slider", {
                 modules: [ Navigation, Pagination ],
+                touchReleaseOnEdges: true,
+                edgeSwipeDetection: true,
+                edgeSwipeThreshold: 20,
                 observer: true,
                 observeParents: true,
                 slidesPerView: 1.3,
@@ -5331,6 +5376,9 @@
                     if (e.matches) {
                         new core(".trust__slider", {
                             modules: [ Navigation, Pagination ],
+                            touchReleaseOnEdges: true,
+                            edgeSwipeDetection: true,
+                            edgeSwipeThreshold: 20,
                             observer: true,
                             observeParents: true,
                             slidesPerView: 1.3,

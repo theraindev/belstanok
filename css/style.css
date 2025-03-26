@@ -9052,6 +9052,17 @@ body::after {
   }
 }
 
+.swiper {
+  touch-action: pan-y; /* Разрешаем вертикальный скролл */
+}
+
+.swiper-wrapper {
+  /* Для горизонтальных слайдеров: */
+  touch-action: pan-y pan-x;
+  /* Для вертикальных слайдеров: */
+  /* touch-action: pan-x pan-y; */
+}
+
 @media (min-width: 75em) {
   .car {
     padding-bottom: 1.875rem;
