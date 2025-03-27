@@ -10,7 +10,7 @@
 			opacity: 1;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20250327132732">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250327191755">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -653,7 +653,13 @@
 												<div class="swiper-slide">
 													<div class="slider__image"><picture><source srcset="//into-the-program.com/demo/images/sample009.webp" type="image/webp"><img src="//into-the-program.com/demo/images/sample009.jpg" alt="" /></picture></div>
 												</div>
-
+												<div class="swiper-slide" style="cursor: pointer;">
+													<a style="pointer-events: none" href="https://www.youtube.com/watch?v=vXkovcnJRgU" data-preload="false">
+														<div style="pointer-events: none" class="slider__image video-thumbnail" style="display: flex; align-items: center; justify-content: center">
+															<iframe style="pointer-events: none" width="460" height="300" src="https://www.youtube.com/embed/vXkovcnJRgU" title="НОВИНКА!! Крымский Инструмент Болгарка От Фиолента" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+														</div>
+													</a>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -668,21 +674,28 @@
 
 										<!-- Слайдер с изображениями -->
 										<div data-gallery class="swiper-wrapper">
-											<a href="img/card/01.png" class="swiper-slide">
+											<a data-fancybox="gallery" href="img/card/01.png" data-width="3600" data-height="1600" class="swiper-slide">
 												<div class="slider__image"><picture><source srcset="img/card/01.webp" type="image/webp"><img src="img/card/01.png" alt="" /></picture></div>
 											</a>
-											<a href="//into-the-program.com/demo/images/sample005.jpg" class="swiper-slide">
+											<a data-fancybox="gallery" href="//into-the-program.com/demo/images/sample005.jpg" data-width="3600" data-height="1600" class="swiper-slide">
 												<div class="slider__image"><picture><source srcset="//into-the-program.com/demo/images/sample005.webp" type="image/webp"><img src="//into-the-program.com/demo/images/sample005.jpg" alt="" /></picture></div>
 											</a>
-											<a href="//into-the-program.com/demo/images/sample007.jpg" class="swiper-slide">
+											<a data-fancybox="gallery" href="//into-the-program.com/demo/images/sample007.jpg" data-width="3600" data-height="1600" class="swiper-slide">
 												<div class="slider__image"><picture><source srcset="//into-the-program.com/demo/images/sample007.webp" type="image/webp"><img src="//into-the-program.com/demo/images/sample007.jpg" alt="" /></picture></div>
 											</a>
-											<a href="//into-the-program.com/demo/images/sample008.jpg" class="swiper-slide">
+											<a data-fancybox="gallery" href="//into-the-program.com/demo/images/sample008.jpg" data-width="3600" data-height="1600" class="swiper-slide">
 												<div class="slider__image"><picture><source srcset="//into-the-program.com/demo/images/sample008.webp" type="image/webp"><img src="//into-the-program.com/demo/images/sample008.jpg" alt="" /></picture></div>
 											</a>
-											<a href="//into-the-program.com/demo/images/sample009.jpg" class="swiper-slide">
+											<a data-fancybox="gallery" href="//into-the-program.com/demo/images/sample009.jpg" data-width="3600" data-height="1600" class="swiper-slide">
 												<div class="slider__image"><picture><source srcset="//into-the-program.com/demo/images/sample009.webp" type="image/webp"><img src="//into-the-program.com/demo/images/sample009.jpg" alt="" /></picture></div>
 											</a>
+											<div class="swiper-slide video-slide">
+												<a href="https://www.youtube.com/watch?v=vXkovcnJRgU" data-fancybox="video-gallery" data-type="youtube" data-preload="false">
+													<div class="slider__image video-thumbnail" style="display: flex; align-items: center; justify-content: center">
+														<iframe width="460" height="300" src="https://www.youtube.com/embed/vXkovcnJRgU" title="НОВИНКА!! Крымский Инструмент Болгарка От Фиолента" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+													</div>
+												</a>
+											</div>
 										</div>
 
 									</div>
@@ -1290,13 +1303,8 @@
 				</div>
 			</div>
 		</footer>
-		<style>
-			.footer {
-				margin-bottom: 40px;
-			}
-		</style>
 	</div>
-	<script src="js/app.min.js?_v=20250327132732"></script>
+	<script src="js/app.min.js?_v=20250327191755"></script>
 </body>
 
 </html>
