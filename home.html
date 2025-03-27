@@ -10,7 +10,7 @@
 			opacity: 1;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20250327191755">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250327231848">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -204,7 +204,11 @@
 
 				<!-- это католог , что бы добавить под меню нужно свзять для button data-parent="4" а под меню data-submenu="4"(и не забывает в кнопке должна быть arrow) -->
 				<nav class="header__catalog-body catalog-header">
-					<h2 class="catalog-header__title">Каталог</h2>
+					<h2 class="catalog-header__title" style="display: flex; align-items: center; justify-content: space-between">
+						<button class="menu-catalog__back-main" style="position: relative; top: 7px"><img src="img/header/arrow.svg" alt="#"> назад</button>
+						Каталог
+						<button class="menu-catalog__back-main close-force" style="position: relative; top: 7px">выход <picture><source srcset="img/header/x-button.webp" type="image/webp"><img src="img/header/x-button.png" alt="#" style="filter: brightness(0.6)"></picture></button>
+					</h2>
 					<div class="catalog-header__search">
 						<form class="header__search">
 							<input autocomplete="off" type="text" name="search" placeholder="Поиск в каталоге" class="header__search-input input">
@@ -354,7 +358,6 @@
 					</ul>
 					<div class="catalog-header__sub-menu">
 						<div hidden data-submenu="1" class="catalog-header__sub-list-body sub-menu-catalog__block">
-							<button class="menu-catalog__back"><img src="img/header/arrow.svg" alt="#"> назад</button>
 							<h3>Инструменты</h3>
 							<ul class="catalog-header__sub-list">
 								<li><a href="#">Аккумуляторныйинструментинструментинструментинструмент инструмент</a></li>
@@ -461,7 +464,6 @@
 							</ul>
 						</div>
 						<div hidden data-submenu="2" class="catalog-header__sub-list-body sub-menu-catalog__block">
-							<button class="menu-catalog__back"><img src="img/header/arrow.svg" alt="#"> назад</button>
 							<h3>Инструменты 2</h3>
 							<ul class="catalog-header__sub-list">
 								<li><a href="#">Аккумуляторный инструмент</a></li>
@@ -515,7 +517,6 @@
 							</ul>
 						</div>
 						<div hidden data-submenu="3" class="catalog-header__sub-list-body sub-menu-catalog__block">
-							<button class="menu-catalog__back"><img src="img/header/arrow.svg" alt="#"> назад</button>
 							<h3>Инструменты 3</h3>
 							<ul class="catalog-header__sub-list">
 								<li><a href="#"> инструмент</a></li>
@@ -2036,7 +2037,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20250327191755"></script>
+	<script src="js/app.min.js?_v=20250327231848"></script>
 </body>
 
 </html>

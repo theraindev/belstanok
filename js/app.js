@@ -4843,15 +4843,6 @@
             })
         });
     }
-    document.addEventListener("touchstart", (function(e) {
-        const swiperElement = e.target.closest(".swiper");
-        if (swiperElement) {
-            const swiperInstance = swiperElement.swiper;
-            if (swiperInstance && !swiperInstance.allowTouchMove) e.preventDefault();
-        }
-    }), {
-        passive: false
-    });
     function initSliders() {
         if (document.querySelector(".advertising__slider")) new core(".advertising__slider", {
             modules: [ Navigation, Pagination, Autoplay, EffectFade, Scrollbar ],
@@ -5059,25 +5050,21 @@
         if (document.querySelector(".slider__images .swiper-container")) {
             const sliderThumbs = new core(".slider__thumbs .swiper-container", {
                 modules: [ Navigation, Thumb ],
-                touchReleaseOnEdges: true,
-                edgeSwipeDetection: true,
-                edgeSwipeThreshold: 20,
-                on: {
-                    touchStart: function(swiper, e) {
-                        if (swiper.isBeginning || swiper.isEnd) swiper.allowTouchMove = false; else swiper.allowTouchMove = true;
-                    }
-                },
                 direction: "vertical",
                 slidesPerView: 3,
                 spaceBetween: 24,
+                freeMode: true,
+                touchRatio: .8,
+                allowTouchMove: true,
+                simulateTouch: true,
                 navigation: {
                     nextEl: ".slider__next",
                     prevEl: ".slider__prev"
                 },
-                freeMode: true,
                 breakpoints: {
                     0: {
-                        direction: "horizontal"
+                        direction: "horizontal",
+                        touchRatio: 1
                     },
                     768: {
                         direction: "vertical"
@@ -5086,29 +5073,59 @@
             });
             new core(".slider__images .swiper-container", {
                 modules: [ Navigation, Thumb, Mousewheel ],
-                touchReleaseOnEdges: true,
-                edgeSwipeDetection: true,
-                edgeSwipeThreshold: 20,
-                on: {
-                    touchStart: function(swiper, e) {
-                        if (swiper.isBeginning || swiper.isEnd) swiper.allowTouchMove = false; else swiper.allowTouchMove = true;
-                    }
-                },
                 direction: "vertical",
                 slidesPerView: 1,
                 spaceBetween: 32,
                 mousewheel: true,
+                grabCursor: true,
+                touchRatio: 1,
+                allowTouchMove: true,
+                simulateTouch: true,
+                noSwipingSelector: "iframe",
                 navigation: {
                     nextEl: ".slider__next",
                     prevEl: ".slider__prev"
                 },
-                grabCursor: true,
                 thumbs: {
                     swiper: sliderThumbs
                 },
+                on: {
+                    init: function() {
+                        const videoSlide = document.querySelector(".video-slide");
+                        if (videoSlide) {
+                            let startX, startY, isTap;
+                            videoSlide.addEventListener("touchstart", (e => {
+                                startX = e.touches[0].clientX;
+                                startY = e.touches[0].clientY;
+                                isTap = true;
+                            }), {
+                                passive: true
+                            });
+                            videoSlide.addEventListener("touchmove", (e => {
+                                const moveX = e.touches[0].clientX;
+                                const moveY = e.touches[0].clientY;
+                                if (Math.abs(moveX - startX) > 5 || Math.abs(moveY - startY) > 5) isTap = false;
+                            }), {
+                                passive: true
+                            });
+                            videoSlide.addEventListener("touchend", (e => {
+                                if (isTap) {
+                                    const link = videoSlide.querySelector("a");
+                                    if (link) {
+                                        link.style.pointerEvents = "auto";
+                                        setTimeout((() => link.click()), 50);
+                                    }
+                                }
+                            }), {
+                                passive: true
+                            });
+                        }
+                    }
+                },
                 breakpoints: {
                     0: {
-                        direction: "horizontal"
+                        direction: "horizontal",
+                        touchRatio: 1.2
                     },
                     768: {
                         direction: "vertical"
@@ -10268,14 +10285,20 @@
             } else console.log("Ой ой, нет такого подменю :(");
             e.preventDefault();
         }
-        if (targetElement.closest(".menu-catalog__back") || targetElement.closest(".sub-menu-catalog__back")) {
-            document.documentElement.classList.remove("sub-menu-open");
-            document.querySelectorAll("._sub-menu-active").forEach((activeLink => {
-                activeLink.classList.remove("_sub-menu-active");
-            }));
-            document.querySelectorAll("._sub-menu-open").forEach((activeBlock => {
-                activeBlock.classList.remove("_sub-menu-open");
-            }));
+        if (targetElement.closest(".menu-catalog__back-main")) {
+            const isForceClose = targetElement.closest(".menu-catalog__back-main.close-force");
+            if (isForceClose) closeCatalog(); else {
+                const isSubMenuOpen = document.documentElement.classList.contains("sub-menu-open");
+                if (window.matchMedia("(max-width: 991.98px)").matches) if (isSubMenuOpen) {
+                    document.documentElement.classList.remove("sub-menu-open");
+                    document.querySelectorAll("._sub-menu-active").forEach((activeLink => {
+                        activeLink.classList.remove("_sub-menu-active");
+                    }));
+                    document.querySelectorAll("._sub-menu-open").forEach((activeBlock => {
+                        activeBlock.classList.remove("_sub-menu-open");
+                    }));
+                } else closeCatalog(); else closeCatalog();
+            }
             e.preventDefault();
         }
         const catalogButton = document.querySelector(".header__catalog");

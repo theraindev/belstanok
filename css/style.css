@@ -3430,7 +3430,7 @@ body::after {
     background: rgb(255, 255, 255);
     filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.35));
     left: -100%;
-    top: 0;
+    top: 65px;
     z-index: 14;
     padding: 6.25rem 1.875rem 1.875rem 1.875rem;
     transition: all 0.3s ease 0s;
@@ -3440,7 +3440,7 @@ body::after {
 }
 @media (max-width: 29.99875em) {
   .catalog-header__sub-list-body {
-    padding: 3.75rem 0.9375rem;
+    padding: 0.9375rem 0.9375rem;
   }
 }
 .catalog-header__sub-list-body._sub-menu-open {
@@ -3563,6 +3563,26 @@ body::after {
 }
 @media (max-width: 61.99875em) {
   .menu-catalog__back {
+    display: flex;
+  }
+}
+
+.menu-catalog__back-main {
+  display: none;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.2;
+  padding-bottom: 0.625rem;
+  align-items: center;
+  gap: 0.3125rem;
+}
+.menu-catalog__back-main img {
+  width: 13px;
+  height: 13px;
+  transform: rotate(90deg);
+}
+@media (max-width: 61.99875em) {
+  .menu-catalog__back-main {
     display: flex;
   }
 }
@@ -11469,6 +11489,36 @@ body::after {
     height: 190px !important;
   }
 }
+.swiper-container {
+  touch-action: pan-y;
+  overflow: hidden;
+}
+
+.swiper-vertical {
+  touch-action: pan-x;
+}
+
+.swiper-wrapper {
+  -webkit-overflow-scrolling: touch;
+}
+
+.video-slide {
+  position: relative;
+}
+
+.video-slide iframe {
+  pointer-events: none;
+}
+
+.video-slide a {
+  pointer-events: none;
+}
+
+/* Для превью в thumbnails */
+.slider__thumbs .video-thumbnail iframe {
+  pointer-events: none !important;
+}
+
 @media (min-width: 75em) {
   .categories {
     padding-bottom: 1.875rem;
