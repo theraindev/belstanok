@@ -5332,27 +5332,43 @@
         const startPoint = header.dataset.scroll ? header.dataset.scroll : 1;
         let scrollDirection = 0;
         let timer;
+        const originalHeaderHeight = header.offsetHeight;
+        header.style.minHeight = `${originalHeaderHeight}px`;
         document.addEventListener("windowScroll", (function(e) {
             const scrollTop = window.scrollY;
             clearTimeout(timer);
             if (scrollTop >= startPoint) {
                 if (!header.classList.contains("_header-scroll")) {
                     header.classList.add("_header-scroll");
+                    header.style.minHeight = `${originalHeaderHeight}px`;
                     if (headerCatalog) headerCatalog.style.cssText = "bottom: 17%;";
                 }
-                if (!header.classList.contains("_header-show")) header.classList.add("_header-show");
+                if (!header.classList.contains("_header-show")) {
+                    header.classList.add("_header-show");
+                    header.style.minHeight = `${originalHeaderHeight}px`;
+                }
                 if (headerShow) {
-                    if (scrollTop > scrollDirection) ; else if (!header.classList.contains("_header-show")) header.classList.add("_header-show");
+                    if (scrollTop > scrollDirection) ; else if (!header.classList.contains("_header-show")) {
+                        header.classList.add("_header-show");
+                        header.style.minHeight = `${originalHeaderHeight}px`;
+                    }
                     timer = setTimeout((() => {
-                        if (!header.classList.contains("_header-show")) header.classList.add("_header-show");
+                        if (!header.classList.contains("_header-show")) {
+                            header.classList.add("_header-show");
+                            header.style.minHeight = `${originalHeaderHeight}px`;
+                        }
                     }), headerShowTimer);
                 }
             } else {
                 if (header.classList.contains("_header-scroll")) {
                     header.classList.remove("_header-scroll");
+                    header.style.minHeight = `${originalHeaderHeight}px`;
                     if (headerCatalog) headerCatalog.style.cssText = "bottom: 11%;";
                 }
-                if (headerShow) if (header.classList.contains("_header-show")) header.classList.remove("_header-show");
+                if (headerShow) if (header.classList.contains("_header-show")) {
+                    header.classList.remove("_header-show");
+                    header.style.minHeight = `${originalHeaderHeight}px`;
+                }
             }
             scrollDirection = scrollTop <= 0 ? 0 : scrollTop;
         }));
