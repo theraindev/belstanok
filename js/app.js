@@ -5225,7 +5225,7 @@
             handleSlider(mobileBreakpoint);
         }
     }
-    window.addEventListener("load", (function(e) {
+    document.addEventListener("DOMContentLoaded", (function() {
         initSliders();
     }));
     class ScrollWatcher {

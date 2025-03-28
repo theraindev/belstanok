@@ -3132,7 +3132,9 @@ body::after {
 }
 @media (max-width: 47.99875em) {
   .catalog-header__title {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }
 .catalog-header__menu {
@@ -3577,8 +3579,7 @@ body::after {
   gap: 0.3125rem;
 }
 .menu-catalog__back-main img {
-  width: 13px;
-  height: 13px;
+  width: 30px;
   transform: rotate(90deg);
 }
 @media (max-width: 61.99875em) {
@@ -11481,9 +11482,6 @@ body::after {
   }
 }
 @media (max-width: 61.99875em) {
-  .footer {
-    margin-bottom: 80px;
-  }
   .slider__image iframe {
     width: 370px !important;
     height: 190px !important;
