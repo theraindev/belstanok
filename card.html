@@ -10,7 +10,7 @@
 			opacity: 1;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20250328191715">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250329001305">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -198,7 +198,7 @@
 							<li class="menu__item"><a href="" class="menu__link">Новинки</a></li>
 							<li class="menu__item"><a href="" class="menu__link">Деревообработка</a></li>
 							<li class="menu__item"><a href="" class="menu__link">Металлообработка</a></li>
-							<li class="menu__item"><a href="" class="menu__link">Кузнечно-Прессовое</a></li>
+							<li class="menu__item"><a href="" class="menu__link">Кузнечно-прессовое</a></li>
 							<li class="menu__item"><a href="" class="menu__link">Пищевое</a></li>
 							<li class="menu__item"><a href="" class="menu__link">Силовая техника</a></li>
 						</ul>
@@ -622,10 +622,6 @@
 				<div class="car__container">
 					<h2 class="car__title">Генератор бензиновый GEKO 6400 ED-A/HHBA</h2>
 					<div class="car__art"><span>Арт.:</span>123465 RT</div>
-					<div style="display: flex; gap: 5px; margin-bottom: 5px">
-						<div class="card__slides-count"><picture><source srcset="img/card/picture.webp" type="image/webp"><img src="img/card/picture.png" alt="" height="20px"></picture> 5</div>
-						<div class="card__slides-count__photo"><picture><source srcset="img/card/play.webp" type="image/webp"><img src="img/card/play.png" alt="" height="20px"></picture></div>
-					</div>
 					<div class="car__tools">
 						<a href="#"><picture><source srcset="img/card/print.webp" type="image/webp"><img src="img/card/print.png" alt="#"></picture><span>Распечатать</span></a>
 						<a href="#"><picture><source srcset="img/card/share.webp" type="image/webp"><img src="img/card/share.png" alt="#"></picture><span>Поделиться</span></a>
@@ -650,7 +646,7 @@
 												<div class="swiper-slide" style="cursor: pointer;">
 													<a style="pointer-events: none" href="https://www.youtube.com/watch?v=vXkovcnJRgU" data-preload="false">
 														<div style="pointer-events: none" class="slider__image video-thumbnail" style="display: flex; align-items: center; justify-content: center">
-															<iframe style="pointer-events: none" width="460" height="300" src="https://www.youtube.com/embed/vXkovcnJRgU" title="НОВИНКА!! Крымский Инструмент Болгарка От Фиолента" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+															<iframe width="460" height="300" src="https://rutube.ru/play/embed/7716bd3e665725c3c008ae7ab4ff02e2" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 														</div>
 													</a>
 												</div>
@@ -684,11 +680,19 @@
 												<div class="slider__image"><picture><source srcset="img/card/01.webp" type="image/webp"><img src="img/card/01.png" alt="" /></picture></div>
 											</a>
 											<div class="swiper-slide video-slide">
-												<a href="https://www.youtube.com/watch?v=vXkovcnJRgU" data-fancybox="video-gallery" data-type="youtube" data-preload="false">
-													<div class="slider__image video-thumbnail" style="display: flex; align-items: center; justify-content: center">
-														<iframe width="460" height="300" src="https://www.youtube.com/embed/vXkovcnJRgU" title="НОВИНКА!! Крымский Инструмент Болгарка От Фиолента" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+												<div class="slider__image video-thumbnail" style="position: relative;">
+													<!-- Превью и кнопка воспроизведения -->
+													<div class="video-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #000; z-index: 1; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+														<picture><source srcset="img/card/placeholder.webp" type="image/webp"><img src="img/card/placeholder.png" alt="Video preview" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.7;"></picture>
+														<button class="play-button" style="position: absolute; background: none; border: none; cursor: pointer; z-index: 2;">
+															<picture><source srcset="img/card/play_button.webp" type="image/webp"><img src="img/card/play_button.png" alt=""></picture>
+														</button>
 													</div>
-												</a>
+
+													<!-- Фрейм видео (изначально невидимый) -->
+													<iframe style="width: 100%; height: 100%" src="https://rutube.ru/play/embed/7716bd3e665725c3c008ae7ab4ff02e2?autoplay=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+													</iframe>
+												</div>
 											</div>
 											<a data-fancybox="gallery" href="//into-the-program.com/demo/images/sample005.jpg" data-width="3600" data-height="1600" class="swiper-slide">
 												<div class="slider__image"><picture><source srcset="//into-the-program.com/demo/images/sample005.webp" type="image/webp"><img src="//into-the-program.com/demo/images/sample005.jpg" alt="" /></picture></div>
@@ -1210,7 +1214,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20250328191715"></script>
+	<script src="js/app.min.js?_v=20250329001305"></script>
 	<style>
 		@media (max-width: 48em) {
 			.footer {
