@@ -96,9 +96,26 @@ h6 {
 Сніппет (HTML): cnt
 */
 [class*=__container] {
-  max-width: 75rem;
+  max-width: var(--container-size);
   margin: 0 auto;
   padding: 0 0.9375rem;
+}
+
+:root {
+  font-size: 14px;
+  --container-size: 75rem;
+}
+
+@media (min-width: 90rem) {
+  :root {
+    --container-size: 85rem;
+  }
+}
+
+@media (min-width: 110rem) {
+  :root {
+    --container-size: 100rem;
+  }
 }
 
 input[type=text],
@@ -277,7 +294,7 @@ body::after {
   flex: 0 1 50%;
   background: #ededed;
   color: rgb(0, 0, 0);
-  font-family: "Geometria-Medium";
+  font-weight: 500;
   height: 4.375rem;
   border-radius: 0.9375rem 0rem 0 0;
 }
@@ -441,7 +458,7 @@ body::after {
   }
 }
 .popup-login__button {
-  font-family: "Geometria-Bold";
+  font-weight: 700;
   color: rgb(255, 255, 255);
 }
 @media (min-width: 75em) {
@@ -500,7 +517,7 @@ body::after {
 }
 
 .popup-login-link {
-  font-family: "Geometria-Medium";
+  font-weight: 500;
   text-align: center;
   text-decoration: underline;
   color: #000000;
@@ -799,7 +816,7 @@ body::after {
 
 .spollers__body {
   border-radius: 0.3125rem;
-  font-family: "Geometria-Regular";
+  font-weight: 400;
   padding: 1.25rem 3.125rem;
   color: #000000;
 }
@@ -2070,7 +2087,7 @@ body::after {
   display: none;
 }
 ._header-scroll .header__main-body {
-  max-width: 75rem;
+  max-width: var(--container-size);
   margin: 0 auto;
   background: #ffffff;
   position: fixed;
@@ -4598,8 +4615,9 @@ body::after {
   color: white;
 }
 .popular__slide-title {
-  font-weight: 700;
-  padding: 1.875rem 1.875rem 0rem 1.875rem;
+  font-weight: 500;
+  padding: 1.875rem 1.875rem 0 1.875rem;
+  hyphens: auto;
 }
 @media (min-width: 75em) {
   .popular__slide-title {
@@ -4880,9 +4898,13 @@ body::after {
   color: #ffffff;
 }
 
+.new {
+  line-height: 1.3;
+}
+
 @media (min-width: 75em) {
   .new {
-    padding-top: 1.875rem;
+    padding-top: 0.625rem;
   }
 }
 @media (min-width: 20em) and (max-width: 75em) {
@@ -4927,16 +4949,20 @@ body::after {
 .new__title a {
   color: #6c6c6c;
 }
+
+.new__item-image-wrapper {
+  position: relative;
+}
+
 .new__photo-count {
   display: flex;
   gap: 5px;
   position: absolute;
-  top: 150px;
   left: 30px;
+  bottom: 0;
 }
 @media (max-width: 47.99875em) {
   .new__photo-count {
-    top: 80px;
     left: 10px;
   }
 }
@@ -5006,6 +5032,7 @@ body::after {
   position: relative;
   border-radius: 0.9375rem;
   transition: all 0.3s ease 0s;
+  line-height: 1.33;
 }
 @media (min-width: 75em) {
   .new__item {
@@ -5030,7 +5057,7 @@ body::after {
   }
 }
 @media (any-hover: hover) {
-  .new__item:hover {
+  .new__item:not(.new__slide):hover {
     filter: drop-shadow(0px 5px 3px rgba(0, 0, 0, 0.25));
     background: rgb(255, 255, 255);
     border-radius: 0.9375rem;
@@ -5047,7 +5074,7 @@ body::after {
   }
 }
 .new__wrapper {
-  padding-bottom: 3%;
+  padding-bottom: 0.625rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(12.625rem, 1fr));
   justify-content: space-between;
@@ -5093,7 +5120,7 @@ body::after {
     gap: 0.9375rem;
   }
 }
-.new__slide:hover {
+.new__slide:not(.new__item):hover {
   filter: drop-shadow(0px 5px 3px rgba(0, 0, 0, 0.25));
   background: rgb(255, 255, 255);
 }
@@ -5273,7 +5300,7 @@ body::after {
   }
 }
 .new__art {
-  font-weight: 600;
+  font-weight: 500;
 }
 @media (min-width: 75em) {
   .new__art {
@@ -5302,9 +5329,10 @@ body::after {
   font-weight: 400;
 }
 .new__name {
-  font-weight: 700;
+  font-weight: 500;
   word-wrap: break-word; /* Принудительный перенос слов */
   overflow-wrap: break-word; /* Альтернатива для современных браузеров */
+  hyphens: auto;
   color: #000000;
 }
 @media (min-width: 75em) {
@@ -8738,7 +8766,7 @@ body::after {
   height: 12px;
 }
 .slide-reviews__name {
-  font-family: "Geometria-Bold";
+  font-weight: 700;
   color: rgb(0, 0, 0);
 }
 @media (min-width: 75em) {
@@ -12306,6 +12334,7 @@ body::after {
   border: 1px solid #e0e0e0; /* Пример границы, подстройте под ваш дизайн */
   border-radius: 8px;
   overflow: hidden;
+  line-height: 1.3;
 }
 
 .accordion-button {
@@ -12428,6 +12457,7 @@ body::after {
 .swiper-autoheight,
 .swiper-autoheight .swiper-slide {
   height: auto;
+  align-self: stretch;
 }
 
 .swiper-autoheight .swiper-wrapper {
