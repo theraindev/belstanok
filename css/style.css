@@ -11024,7 +11024,7 @@ body::after {
   border-style: solid;
   filter: drop-shadow(2px 4px 3px rgba(0, 0, 0, 0.25));
   display: flex;
-  justify-content: space-between;
+  /*justify-content: space-between;*/
   gap: 0.4375rem;
 }
 .condition__icon {
@@ -11056,6 +11056,8 @@ body::after {
   line-height: 1.2;
   color: #000000;
   align-self: center;
+  flex-grow: 1;
+  text-align: center;
 }
 @media (min-width: 1200px) {
   .condition__text {
