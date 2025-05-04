@@ -5471,7 +5471,7 @@
                 spaceBetween: 30
             },
             1280: {
-                slidesPerView: 6,
+                slidesPerView: 5,
                 spaceBetween: 30
             }
         };
@@ -5594,7 +5594,7 @@
             on: {}
         });
         if (document.querySelector(".reviews__slider")) new swiper_core_Swiper(".reviews__slider", {
-            modules: [ Pagination, freeMode ],
+            modules: [ Navigation, Pagination, freeMode ],
             touchReleaseOnEdges: true,
             edgeSwipeDetection: true,
             edgeSwipeThreshold: 20,
@@ -5609,6 +5609,10 @@
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true
+            },
+            navigation: {
+                prevEl: ".stock-swiper-button-prev",
+                nextEl: ".stock-swiper-button-next"
             },
             breakpoints: {
                 440: {
@@ -5805,7 +5809,7 @@
                     const trustWrapper = document.querySelector(".trust__wrapper");
                     if (trustWrapper) {
                         trustWrapper.style.display = "grid";
-                        trustWrapper.style.gridTemplateColumns = "repeat(auto-fill, minmax(15rem, 1fr))";
+                        trustWrapper.style.gridTemplateColumns = "repeat(auto-fit, minmax(15rem, 1fr))";
                         trustWrapper.style.gap = "20px";
                     }
                 }
