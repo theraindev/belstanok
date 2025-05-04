@@ -10550,12 +10550,10 @@ body::after {
   }
 }
 .services-description__item {
-  cursor: pointer;
   display: flex;
   align-items: center;
   padding: 0.625rem;
   border-radius: 2.9375rem;
-  transition: background-color 0.3s ease 0s;
 }
 @media (min-width: 1200px) {
   .services-description__item {
@@ -10577,11 +10575,6 @@ body::after {
 @media (max-width: 320px) {
   .services-description__item {
     gap: 0.625rem;
-  }
-}
-@media (any-hover: hover) {
-  .services-description__item:hover {
-    background-color: #ededed;
   }
 }
 .services-description__icon {
