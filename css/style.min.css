@@ -6709,7 +6709,7 @@ body::after {
 }
 @media (max-width: 479.98px) {
   .company__items {
-    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(11.25rem, 1fr));
   }
 }
 .company__item {
@@ -6763,6 +6763,10 @@ body::after {
   .company__item {
     padding: 0.625rem 0.3125rem 2.5rem;
     justify-content: flex-start;
+  }
+
+  .company__item.full-width {
+    grid-column: -1 / 1;
   }
 }
 .company__number {
