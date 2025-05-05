@@ -11060,4 +11060,57 @@
     formQuantity();
     headerScroll();
     digitsCounter();
+    videoWrapperHandler();
 })();
+
+function videoWrapperHandler() {
+    const videos = document.querySelectorAll(".video-wrapper");
+
+    videos.forEach((video) => {
+        video.addEventListener("click", videoOnClickHandler);
+    });
+}
+
+function videoOnClickHandler() {
+    const {id, service} = this.dataset;
+    const src = videoSrc(id, service);
+
+    const iframe = createVideoFrame(src, service === 'rutube');
+
+    this.innerHTML = "";
+    this.appendChild(iframe);
+}
+
+function videoSrc(id, type) {
+    if (type === 'rutube') {
+        return `https://rutube.ru/embed/${id}/`;
+    }
+
+    return `https://www.youtube.com/embed/${id}/?rel=0&showinfo=0&autoplay=1`;
+}
+
+function createVideoFrame(src, withPostScripts) {
+    var iframe = document.createElement("iframe");
+
+    iframe.setAttribute("frameborder", "0");
+    iframe.setAttribute("allowfullscreen", "");
+    iframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share");
+    iframe.setAttribute("src", src);
+
+    if (withPostScripts) {
+        iframe.onload = function () {
+            iframe.contentWindow.postMessage(JSON.stringify({
+                type: 'player:setCurrentTime',
+                data: {
+                    time: 0
+                }
+            }), '*');
+            iframe.contentWindow.postMessage(JSON.stringify({
+                type: 'player:play',
+                data: {}
+            }), '*');
+        };
+    }
+
+    return iframe;
+}
