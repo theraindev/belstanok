@@ -8535,6 +8535,7 @@ body::after {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  background-color: black;
 }
 
 @media (hover: hover) {
@@ -11542,7 +11543,6 @@ body::after {
 }
 @media (max-width: 768px) {
   .tabs-description__titles {
-    flex-direction: column;
     gap: 8px;
   }
 }
@@ -11563,7 +11563,6 @@ body::after {
 }
 @media (max-width: 768px) {
   .tabs-description__title {
-    width: 100%;
     justify-content: space-between;
   }
 }
@@ -11586,6 +11585,7 @@ body::after {
 }
 .tabs-description__body {
   position: relative;
+  text-wrap: balance;
 }
 .tabs-description__item {
   padding: 25px 0;
