@@ -11005,8 +11005,7 @@
         }
         catalogItems.forEach((item => {
             const button = item.querySelector('button[data-parent]');
-
-            const subMenuId = button.dataset.parent;
+            const subMenuId = button ? button.dataset.parent : 0;
             const subMenu = document.querySelector(`[data-submenu="${subMenuId}"]`);
             if (subMenu) {
                 item.addEventListener("mouseenter", (() => {
@@ -11026,17 +11025,18 @@
                         }
                     }), 100);
                 }));
+
+                subMenu.addEventListener("mouseenter", (() => {
+                    if (!isScreenLarge()) return;
+                    subMenu.hidden = false;
+                    button.querySelector(".catalog-header__item-arrow").style.opacity = "1";
+                }));
+                subMenu.addEventListener("mouseleave", (() => {
+                    if (!isScreenLarge()) return;
+                    subMenu.hidden = true;
+                    button.querySelector(".catalog-header__item-arrow").style.opacity = "0";
+                }));
             }
-            subMenu.addEventListener("mouseenter", (() => {
-                if (!isScreenLarge()) return;
-                subMenu.hidden = false;
-                button.querySelector(".catalog-header__item-arrow").style.opacity = "1";
-            }));
-            subMenu.addEventListener("mouseleave", (() => {
-                if (!isScreenLarge()) return;
-                subMenu.hidden = true;
-                button.querySelector(".catalog-header__item-arrow").style.opacity = "0";
-            }));
         }));
         document.addEventListener("mouseover", (e => {
             if (!isScreenLarge()) return;
