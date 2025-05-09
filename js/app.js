@@ -11064,7 +11064,53 @@
     headerScroll();
     digitsCounter();
     videoWrapperHandler();
+    heightMinimizerInit();
 })();
+
+function heightMinimizerInit() {
+    const minimizerNodes = document.querySelectorAll('.height-minimizer');
+
+    if (!minimizerNodes.length) return;
+
+    const minimizedCls = 'minimized';
+
+    const reset = (element) => {
+        element.classList.remove(minimizedCls)
+        element.querySelector('.height-minimizer__content').removeAttribute('style');
+    };
+
+    const fullTextContent = (element) => {
+        const fullTextWrapper = document.createElement('div');
+        fullTextWrapper.classList.add('height-minimizer__full-text');
+
+        const button = document.createElement('span');
+        button.textContent = 'Показать еще';
+        button.role = 'button';
+        button.classList.add('height-minimizer__full-text-lnk');
+
+        button.addEventListener('click', () => {
+            reset(element)
+        });
+
+        fullTextWrapper.appendChild(button);
+
+        element.appendChild(fullTextWrapper);
+    }
+
+    minimizerNodes.forEach(function (one) {
+        const maxHeight = one.dataset.max || 500;
+
+        const contentElement = one.querySelector('.height-minimizer__content');
+        const contentHeight = contentElement.offsetHeight;
+
+        if (contentHeight > maxHeight) {
+            one.classList.add(minimizedCls);
+            contentElement.style.height = maxHeight + 'px';
+
+            fullTextContent(one);
+        }
+    });
+}
 
 function videoWrapperHandler() {
     const videos = document.querySelectorAll(".video-wrapper");

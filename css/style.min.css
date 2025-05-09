@@ -11561,6 +11561,7 @@ body::after {
 }
 .tabs-description__title {
   --_tab-clr: #f5f5f5;
+  --_tab-font-clr: var(--tab-font-clr, black);
   border: none;
   cursor: pointer;
   display: flex;
@@ -11592,6 +11593,7 @@ body::after {
     flex-wrap: wrap;
   }
   .tabs-description__title {
+    color: var(--_tab-font-clr);
     background-color: var(--_tab-clr);
     border-radius: 8px;
     padding: 12px 24px;
@@ -11614,6 +11616,7 @@ body::after {
 
 .tabs-description__title._tab-active {
   --_tab-clr: #007bff;
+  --tab-font-clr: #fff;
 }
 
 .tabs-description__title._tab-active img {
@@ -14521,4 +14524,43 @@ html.with-fancybox body.hide-scrollbar {
   z-index: 30;
   user-select: none;
   pointer-events: none;
+}
+.height-minimizer {
+  --bg-color: #fff;
+}
+.height-minimizer__content {
+  position: relative;
+}
+.height-minimizer__full-text {
+  text-align: right;
+}
+.height-minimizer__full-text-lnk {
+  color: #6c6c6c;
+  cursor: pointer;
+  font-weight: 500;
+}
+.height-minimizer__content::after {
+  content: '';
+  position: absolute;
+  display: none;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 30px;
+  background-image: linear-gradient(rgba(255, 255, 255, 0), #fff);
+  background-image: linear-gradient(color(from var(--bg-color) srgb r g b / 0), var(--bg-color));
+}
+
+.height-minimizer__full-text {
+  display: none;
+  margin-top: 10px;
+}
+
+.minimized .height-minimizer__content {
+  overflow: hidden;
+}
+
+.minimized .height-minimizer__content:after,
+.minimized .height-minimizer__full-text {
+  display: block;
 }
