@@ -309,6 +309,7 @@
     function menuInit() {
         if (document.querySelector(".icon-menu")) document.addEventListener("click", (function(e) {
             if (bodyLockStatus && e.target.closest(".icon-menu")) {
+                console.log(e.target);
                 bodyLockToggle();
                 document.documentElement.classList.toggle("menu-open");
             }
@@ -10921,7 +10922,7 @@
         }
         if (targetElement.closest(".button-menu-phone")) {
             document.documentElement.classList.toggle("body-catalog-open");
-            document.documentElement.classList.toggle("menu-open");
+            // document.documentElement.classList.toggle("menu-open");
             document.documentElement.classList.toggle("lock");
             if (catalogList) catalogList.classList.toggle("catalog-menu-open");
             e.preventDefault();
@@ -10997,13 +10998,15 @@
         }
     }));
     document.addEventListener("DOMContentLoaded", (function() {
-        const catalogItems = document.querySelectorAll(".catalog-header__item button[data-parent]");
+        const catalogItems = document.querySelectorAll(".catalog-header__item");
         document.querySelector(".catalog-header__sub-menu");
         function isScreenLarge() {
             return window.innerWidth > 991.98;
         }
         catalogItems.forEach((item => {
-            const subMenuId = item.dataset.parent;
+            const button = item.querySelector('button[data-parent]');
+
+            const subMenuId = button.dataset.parent;
             const subMenu = document.querySelector(`[data-submenu="${subMenuId}"]`);
             if (subMenu) {
                 item.addEventListener("mouseenter", (() => {
@@ -11012,14 +11015,14 @@
                         menu.hidden = true;
                     }));
                     subMenu.hidden = false;
-                    item.querySelector(".catalog-header__item-arrow").style.opacity = "1";
+                    button.querySelector(".catalog-header__item-arrow").style.opacity = "1";
                 }));
                 item.addEventListener("mouseleave", (() => {
                     if (!isScreenLarge()) return;
                     setTimeout((() => {
                         if (!subMenu.matches(":hover")) {
                             subMenu.hidden = true;
-                            item.querySelector(".catalog-header__item-arrow").style.opacity = "0";
+                            button.querySelector(".catalog-header__item-arrow").style.opacity = "0";
                         }
                     }), 100);
                 }));
@@ -11027,12 +11030,12 @@
             subMenu.addEventListener("mouseenter", (() => {
                 if (!isScreenLarge()) return;
                 subMenu.hidden = false;
-                item.querySelector(".catalog-header__item-arrow").style.opacity = "1";
+                button.querySelector(".catalog-header__item-arrow").style.opacity = "1";
             }));
             subMenu.addEventListener("mouseleave", (() => {
                 if (!isScreenLarge()) return;
                 subMenu.hidden = true;
-                item.querySelector(".catalog-header__item-arrow").style.opacity = "0";
+                button.querySelector(".catalog-header__item-arrow").style.opacity = "0";
             }));
         }));
         document.addEventListener("mouseover", (e => {

@@ -3039,6 +3039,7 @@ body::after {
 .catalog-header {
   position: fixed;
   bottom: 11%;
+  width: var(--container-size);
   min-width: 65vw;
   max-width: 1200px;
   z-index: 14;
@@ -3047,7 +3048,16 @@ body::after {
   display: grid;
   opacity: 0;
   transition: all 0.3s ease 0s;
-  grid-template-columns: 35% 1fr;
+  grid-template-columns: minmax(0, 35%) 1fr;
+}
+@media (min-width: 991.98px) {
+  /*.catalog-header {*/
+  /*  position: absolute;*/
+  /*  bottom: auto!important;*/
+  /*  left: 0;*/
+  /*  right: 0;*/
+  /*  padding-top: 0.75rem;*/
+  /*}*/
 }
 .catalog-header__search {
   display: none;
