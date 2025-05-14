@@ -11098,7 +11098,7 @@ function heightMinimizerInit() {
     }
 
     minimizerNodes.forEach(function (one) {
-        const maxHeight = one.dataset.max || 500;
+        const maxHeight = window.matchMedia("(max-width: 991px)").matches ? (one.dataset.maxSm || 100) : (one.dataset.max || 500);
 
         const contentElement = one.querySelector('.height-minimizer__content');
         const contentHeight = contentElement.offsetHeight;

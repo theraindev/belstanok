@@ -10433,7 +10433,7 @@ body::after {
 }
 @media (max-width: 767.98px) {
   .description__container {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(100%, 1fr);
   }
 }
 .spollers-description {
@@ -11586,6 +11586,7 @@ body::after {
 @media (max-width: 767.98px) {
   .tabs-description__title {
     border-bottom: 2px solid var(--_tab-clr);
+    flex: 0 0 auto;
   }
 }
 @media (min-width: 768px) {
@@ -14563,4 +14564,14 @@ html.with-fancybox body.hide-scrollbar {
 .minimized .height-minimizer__content:after,
 .minimized .height-minimizer__full-text {
   display: block;
+}
+
+.scroll-hidden {
+  overflow: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+.scroll-hidden::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
 }
