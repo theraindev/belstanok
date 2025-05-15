@@ -6,6 +6,9 @@
     --main-font-family: Roboto;
     --secondary-font-family: Inter;
     --main-font-size: 16px;
+    --accent-color: #0095FF;
+    --accent-color-darken-15: #007AD1;
+    --font-gray: #9f9f9f;
     /*// --container-size: ;*/
 }
 
@@ -218,6 +221,103 @@ span:empty {
     color: rgba(0, 0, 0, 0.6);
 }
 
+.form {
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form__input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form__input-label {
+    font-weight: 500;
+}
+
+.form__input-field {
+    --_border-color: var(--border-color, #d9d9d9);
+    --_bg-color: var(--input-bg-color, white);
+
+    display: block;
+    max-width: unset;
+    width: 100%;
+    border: 1px solid var(--_border-color);
+    border-radius: 10px;
+    padding: 9px 15px;
+    background-color: var(--_bg-color);
+    font-family: var(--main-font-family), sans-serif;
+    font-weight: 500;
+    min-height: 40px;
+    font-size: 1em;
+}
+
+.form__input-select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 1rem;
+    padding-right: 2rem;
+}
+
+.form__input-field:focus {
+    --border-color: var(--accent-color);
+    --input-bg-color: rgba(0, 149, 255, 0.1);
+    outline: none;
+}
+
+.ui-button {
+    --_btn-bg-clr: var(--btn-clr, transparent);
+    --_btn-text-clr: var(--btn-text-clr, black);
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 17px;
+    font-size: 15px;
+    border-radius: 5px;
+    min-height: 40px;
+    transition: background-color 0.2s linear;
+    background-color: var(--_btn-bg-clr);
+    color: var(--_btn-text-clr);
+    font-weight: 500;
+}
+
+.ui-button--primary {
+    --btn-clr: var(--accent-color);
+    --btn-text-clr: white;
+}
+
+@media (hover: hover) {
+    .ui-button--primary:hover {
+        --btn-clr: var(--accent-color-darken-15);
+    }
+}
+@media (hover: none) {
+    .ui-button--primary:active {
+        --btn-clr: var(--accent-color-darken-15);
+    }
+}
+
+.form--personal-settings {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.form--personal-settings .form__submit {
+    width: 100%;
+    max-width: 380px;
+}
+
+.form--personal-settings .form__input-wrapper--address,
+.form--personal-settings .form__buttons {
+    grid-column: -1 / 1;
+}
+
 @media (max-width: 1199.98px) {
     .cabinet-page__mobile-menu {
         display: flex;
@@ -288,4 +388,8 @@ svg {
 
 .footer {
     margin-top: auto;
+}
+
+.gray {
+    color: var(--font-gray);
 }
