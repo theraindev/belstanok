@@ -21,7 +21,7 @@ span:empty {
 .cabinet-page {
     width: 100%;
     margin-block: var(--vertical-gap);
-    background-color: #f4f5f6;
+    background-color: #f3f6fb;
 }
 
 .cabinet-page__container {
