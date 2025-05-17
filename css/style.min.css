@@ -9750,7 +9750,32 @@ body::after {
 }
 .content-car__price-observer {
   color: #000000;
+  align-self: start;
 }
+a.content-car__price-observer {
+  color: rgb(0, 149, 255);
+}
+.content-car__price-observer .content-car__link-text {
+  border-bottom: 1px dashed currentColor;
+}
+
+.content-car__link-icon {
+  flex: 0 0 20px;
+  text-align: center;
+}
+
+@media (hover: hover ) {
+  a.content-car__price-observer:hover {
+    color: rgba(214, 0, 18);
+  }
+}
+
+@media (hover: none ) {
+  a.content-car__price-observer:active {
+    color: rgba(214, 0, 18);
+  }
+}
+
 @media (min-width: 1200px) {
   .content-car__price-observer {
     font-size: 0.875rem;
@@ -10425,17 +10450,19 @@ body::after {
     padding-bottom: 0.9375rem;
   }
 }
+.description__text {
+  line-height: 1.3;
+}
+.description__text p:not(:last-child) {
+  margin-bottom: .75em;
+}
 .description__container {
   display: grid;
-  grid-template-columns: 68% 30%;
+  grid-template-columns: minmax(100%, 1fr);
   justify-content: space-between;
   gap: 1.25rem;
 }
-@media (max-width: 767.98px) {
-  .description__container {
-    grid-template-columns: minmax(100%, 1fr);
-  }
-}
+
 .spollers-description {
   display: flex;
   flex-direction: column;
@@ -11629,7 +11656,6 @@ body::after {
 }
 .tabs-description__body {
   position: relative;
-  text-wrap: balance;
 }
 .tabs-description__item {
   padding: 25px 0;
