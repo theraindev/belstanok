@@ -7883,6 +7883,9 @@ body::after {
     padding: 0.9375rem 3.75rem;
   }
 }
+.block-form {
+  margin-top: 4rem;
+}
 .block-form__info {
   display: flex;
   flex-direction: column;
@@ -7914,6 +7917,10 @@ body::after {
   }
 }
 @media (max-width: 767.98px) {
+  .block-form {
+    margin-top: 0;
+  }
+
   .block-form__info {
     margin-top: 0rem;
   }

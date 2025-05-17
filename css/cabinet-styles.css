@@ -11,7 +11,6 @@
     --font-gray: #9f9f9f;
     --font-red: #D80000;
     --drop-shadow: drop-shadow(0 2px 8px rgb(212, 212, 212));
-    /*// --container-size: ;*/
 }
 
 span:empty {
@@ -22,6 +21,7 @@ span:empty {
     width: 100%;
     margin-block: var(--vertical-gap);
     background-color: #f3f6fb;
+    line-height: 1.26;
 }
 
 .cabinet-page__container {
@@ -34,7 +34,7 @@ span:empty {
 .cabinet-page__title {
     font-size: 20px;
     font-weight: 500;
-    margin-block: .875rem;
+    margin-block: 0 0.75em;
 }
 
 .cabinet-menu {
@@ -72,26 +72,47 @@ span:empty {
 
 @media (min-width: 1200px) {
     .cabinet-menu {
-        display: block;
+        display: flex;
+        flex-direction: column;
     }
+
     .cabinet-page__container {
         grid-template-columns: var(--left-menu-size) 1fr;
     }
+
     .cabinet-page__title {
         font-size: 32px;
     }
 }
 
-.cabinet-page__left-menu {}
-.cabinet-page__left-menu.isCollapsed {}
-
-.cabinet-page__right-menu {}
-
-.cabinet-page__main {
-
+.cabinet-page__left-menu {
 }
 
-.cabinet-menu {
+@media (min-width: 1199.98px) {
+    .cabinet-page__left-menu {
+        height: calc(100vh - var(--vertical-gap) - 170px);
+    }
+
+    .cabinet-menu__head {
+        position: sticky;
+        top: 0;
+        flex-grow: 0;
+    }
+
+    .cabinet-menu__body {
+        flex-grow: 1;
+        max-height: 100%;
+        overflow: auto;
+    }
+}
+
+.cabinet-page__left-menu.isCollapsed {
+}
+
+.cabinet-page__right-menu {
+}
+
+.cabinet-page__main {
 
 }
 
@@ -100,7 +121,7 @@ span:empty {
     align-items: center;
     justify-content: space-between;
     gap: 5px;
-    margin-bottom: 25px;
+    margin-bottom: 1.5em;
 }
 
 .cabinet-page__right-menu .cabinet-menu__head {
@@ -141,10 +162,6 @@ span:empty {
     display: inline-flex;
 }
 
-.cabinet-menu {
-
-}
-
 .cabinet-menu .btn-link {
     color: #462B84;
 }
@@ -153,6 +170,7 @@ span:empty {
     font-family: var(--secondary-font-family), sans-serif;
     color: #141B34;
 }
+
 .cabinet-menu__nav-title {
     font-size: 12px;
     font-weight: 500;
@@ -164,7 +182,7 @@ span:empty {
 .cabinet-menu__nav-list {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 1px;
 }
 
 .cabinet-menu__nav-link {
@@ -179,6 +197,10 @@ span:empty {
 
 .cabinet-menu__nav-link.isActive {
     --nav-link-bg: rgba(0, 149, 255, 0.1);
+}
+
+.cabinet-menu__nav-link--red {
+    color: red;
 }
 
 @media (hover: hover) {
@@ -325,6 +347,7 @@ span:empty {
         --btn-clr: var(--accent-color-darken-15);
     }
 }
+
 @media (hover: none) {
     .ui-button--primary:active {
         --btn-clr: var(--accent-color-darken-15);
@@ -361,13 +384,15 @@ span:empty {
     font-weight: 500;
 }
 
-.profile-ctrl__name {}
+.profile-ctrl__name {
+}
 
 .profile-ctrl__balance {
     color: var(--font-red);
 }
 
-.header__profile-button {}
+.header__profile-button {
+}
 
 .header__profile-dropdown {
     display: none;
@@ -409,8 +434,9 @@ span:empty {
     .header__profile-button {
         display: none;
     }
+
     .header__profile-dropdown {
-        display: contents!important;
+        display: contents !important;
     }
 
     .cabinet-menu.isVisible {
@@ -469,4 +495,54 @@ svg {
 
 .gray {
     color: var(--font-gray);
+}
+
+.custom-scroll {
+    --scroll-bg-clr: rgba(0, 0, 0, .4);
+    --scroll-bg-clr-hover: rgba(0, 0, 0, .55);
+
+    --scroll-track-size: 7px;
+    --scroll-track-clr: var(--scroll-bg-clr, rgba(0, 0, 0, .4));
+    --scroll-track-clr-hover: var(--scroll-bg-clr-hover, rgba(0, 0, 0, .55));
+
+    overflow-y: auto;
+
+    padding-right: var(--scroll-track-size);
+    margin-right: calc(-1 * var(--scroll-track-size));
+}
+
+/* Ширина скроллбара */
+.custom-scroll::-webkit-scrollbar {
+    width: var(--scroll-track-size);
+}
+
+/* Фон трека */
+.custom-scroll::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Сам ползунок */
+.custom-scroll::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-track-clr);
+    border-radius: 4px;
+}
+
+/* При наведении */
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+    background-color: var(--scroll-track-clr-hover);
+}
+
+.custom-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: var(--scroll-track-clr) transparent;
+}
+
+@media (hover: hover) {
+    .custom-scroll-on-hover {
+        --scroll-bg-clr: transparent;
+    }
+
+    .custom-scroll-on-hover:hover {
+        --scroll-bg-clr: rgba(0, 0, 0, .4);
+    }
 }
