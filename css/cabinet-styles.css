@@ -424,6 +424,7 @@ span:empty {
         padding: 20px 20px 70px;
         z-index: 10;
         min-height: 100vh;
+        overflow: auto;
     }
 
     .main-card {
