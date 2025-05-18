@@ -14655,7 +14655,7 @@ html.with-fancybox body.hide-scrollbar {
   display: inline-block;
   width: 16px;
   aspect-ratio: 1;
-  background-image: url('/img/countries/flags16.png');
+  background-image: url('../img/countries/flags16.png');
   background-repeat: no-repeat;
   filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, .5));
 }
