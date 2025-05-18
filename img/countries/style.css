@@ -1,0 +1,12 @@
+.flag {
+  display: inline-block;
+  width: 32px;
+  aspect-ratio: 1;
+  background-image: url('/img/countries/flags32.png');
+  background-repeat: no-repeat;
+  filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, .5));
+}
+
+.eu{background-position:0 -256px;}
+.ru {background-position: 0 -6208px;}
+.by {background-position: 0 -1728px;}
