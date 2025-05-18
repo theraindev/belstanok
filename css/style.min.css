@@ -3044,28 +3044,17 @@ body::after {
 }
 .catalog-header {
   --_menu-top-pos: var(--menu-top-pos, 125px);
+  --menu-size: 320px;
   position: fixed;
   top: var(--_menu-top-pos);
   bottom: 50px;
-  width: var(--container-size);
-  min-width: 65vw;
-  max-width: 1200px;
+  max-width: var(--container-size);
   z-index: 14;
   transform-origin: 0 0;
   transform: rotateX(-90deg);
   display: grid;
   opacity: 0;
-  /*transition: all 0.1s ease 0s;*/
-  grid-template-columns: minmax(0, 35%) 1fr;
-}
-@media (min-width: 991.98px) {
-  /*.catalog-header {*/
-  /*  position: absolute;*/
-  /*  bottom: auto!important;*/
-  /*  left: 0;*/
-  /*  right: 0;*/
-  /*  padding-top: 0.75rem;*/
-  /*}*/
+  grid-template-columns: var(--menu-size) 1fr;
 }
 .catalog-header__search {
   display: none;
@@ -3191,6 +3180,7 @@ body::after {
 @media (min-width: 1200px) {
   .catalog-header__menu {
     padding: 1.5625rem;
+    width: 100%;
   }
 
   .catalog-header__menu,
@@ -4997,6 +4987,36 @@ body::after {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(17.0625rem, 1fr));
 }
+
+.new__bid {
+  display: flex;
+  gap: 5px;
+  justify-content: space-between;
+}
+
+.new__bid-date,
+.new__bid-count {
+  display: inline-flex;
+  gap: 2px;
+  align-items: center;
+}
+
+.new__bid-date {
+  border-radius: 3px;
+}
+
+.new__bid-icon {
+  color: #1596fc;
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.new__bid-date-value,
+.new__bid-count-value {
+  line-height: 1.5;
+  font-weight: 500;
+}
+
 @media (min-width: 1200px) {
   .new__items {
     gap: 1.6875rem;
@@ -7883,6 +7903,9 @@ body::after {
     padding: 0.9375rem 3.75rem;
   }
 }
+.block-form {
+  margin-top: 4rem;
+}
 .block-form__info {
   display: flex;
   flex-direction: column;
@@ -7914,6 +7937,10 @@ body::after {
   }
 }
 @media (max-width: 767.98px) {
+  .block-form {
+    margin-top: 0;
+  }
+
   .block-form__info {
     margin-top: 0rem;
   }
@@ -9622,6 +9649,14 @@ body::after {
     gap: 0.625rem;
   }
 }
+
+.content-car__country {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.875rem;
+}
+
 .content-car__clock {
   color: rgb(255, 255, 255);
   background: #0095ff;
@@ -9629,7 +9664,65 @@ body::after {
   display: flex;
   align-items: center;
   gap: 0.3125rem;
+  margin: -1.4375rem -1.4375rem 0 -1.4375rem;
 }
+
+.content-car__bids-status {
+  /*display: inline-flex;*/
+  /*align-items: center;*/
+  /*gap: 4px;*/
+}
+
+.content-car__bids-status-icon {
+  width: 1em;
+  height: 1em;
+  color: #1596fc;
+}
+.content-car__bids-status-count {
+  line-height: 1.33;
+}
+
+.content-car__bids-table {
+  table-layout: fixed;
+  border-spacing: 0;
+  border-collapse: collapse;
+  width: 100%;
+  font-size: .875rem;
+}
+
+.content-car__bids-table thead {
+  text-align: left;
+}
+
+.content-car__bids-table th {
+  font-weight: 500;
+}
+
+.content-car__bids-table th:not(:first-child),
+.content-car__bids-table th:not(:last-child) {
+  padding: 8px;
+}
+
+.content-car__bids-table td:not(:first-child),
+.content-car__bids-table td:not(:last-child) {
+  padding: 10px;
+}
+
+.content-car__bids-table th:first-child,
+.content-car__bids-table td:first-child {
+  padding-left: 0;
+}
+
+.content-car__bids-table th:last-child,
+.content-car__bids-table td:last-child {
+  padding-right: 0;
+}
+
+.content-car__bids-table thead tr,
+.content-car__bids-table tbody tr:not(:last-child) {
+  border-bottom: 1px solid #ededed;
+}
+
 @media (min-width: 1200px) {
   .content-car__clock {
     font-size: 1.125rem;
@@ -9699,6 +9792,14 @@ body::after {
   .content-car__price {
     gap: 0.4375rem;
   }
+}
+
+.content-car__price-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 5px;
 }
 .content-car__price-top {
   display: flex;
@@ -14615,3 +14716,16 @@ html.with-fancybox body.hide-scrollbar {
 .scroll-hidden::-webkit-scrollbar {
   display: none; /* Chrome, Safari */
 }
+
+.flag {
+  display: inline-block;
+  width: 16px;
+  aspect-ratio: 1;
+  background-image: url('../img/countries/flags16.png');
+  background-repeat: no-repeat;
+  filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, .5));
+}
+
+.eu {background-position: 0 -128px;}
+.ru {background-position: 0 -3104px;}
+.by {background-position: 0 -864px;}
