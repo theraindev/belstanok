@@ -5935,7 +5935,7 @@
                 if (!header.classList.contains("_header-scroll")) {
                     header.classList.add("_header-scroll");
                     header.style.minHeight = `${originalHeaderHeight}px`;
-                    // if (headerCatalog) headerCatalog.style.cssText = "bottom: 17%;";
+                    if (headerCatalog) headerCatalog.style.cssText = "bottom: 17%;";
                 }
                 if (!header.classList.contains("_header-show")) {
                     header.classList.add("_header-show");
@@ -5957,7 +5957,7 @@
                 if (header.classList.contains("_header-scroll")) {
                     header.classList.remove("_header-scroll");
                     header.style.minHeight = `${originalHeaderHeight}px`;
-                    // if (headerCatalog) headerCatalog.style.cssText = "bottom: 11%;";
+                    if (headerCatalog) headerCatalog.style.cssText = "bottom: 11%;";
                 }
                 if (headerShow) if (header.classList.contains("_header-show")) {
                     header.classList.remove("_header-show");
