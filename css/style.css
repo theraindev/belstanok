@@ -9649,6 +9649,14 @@ body::after {
     gap: 0.625rem;
   }
 }
+
+.content-car__country {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.875rem;
+}
+
 .content-car__clock {
   color: rgb(255, 255, 255);
   background: #0095ff;
@@ -9656,7 +9664,65 @@ body::after {
   display: flex;
   align-items: center;
   gap: 0.3125rem;
+  margin: -1.4375rem -1.4375rem 0 -1.4375rem;
 }
+
+.content-car__bids-status {
+  /*display: inline-flex;*/
+  /*align-items: center;*/
+  /*gap: 4px;*/
+}
+
+.content-car__bids-status-icon {
+  width: 1em;
+  height: 1em;
+  color: #1596fc;
+}
+.content-car__bids-status-count {
+  line-height: 1.33;
+}
+
+.content-car__bids-table {
+  table-layout: fixed;
+  border-spacing: 0;
+  border-collapse: collapse;
+  width: 100%;
+  font-size: .875rem;
+}
+
+.content-car__bids-table thead {
+  text-align: left;
+}
+
+.content-car__bids-table th {
+  font-weight: 500;
+}
+
+.content-car__bids-table th:not(:first-child),
+.content-car__bids-table th:not(:last-child) {
+  padding: 8px;
+}
+
+.content-car__bids-table td:not(:first-child),
+.content-car__bids-table td:not(:last-child) {
+  padding: 10px;
+}
+
+.content-car__bids-table th:first-child,
+.content-car__bids-table td:first-child {
+  padding-left: 0;
+}
+
+.content-car__bids-table th:last-child,
+.content-car__bids-table td:last-child {
+  padding-right: 0;
+}
+
+.content-car__bids-table thead tr,
+.content-car__bids-table tbody tr:not(:last-child) {
+  border-bottom: 1px solid #ededed;
+}
+
 @media (min-width: 1200px) {
   .content-car__clock {
     font-size: 1.125rem;
@@ -9726,6 +9792,14 @@ body::after {
   .content-car__price {
     gap: 0.4375rem;
   }
+}
+
+.content-car__price-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 5px;
 }
 .content-car__price-top {
   display: flex;
@@ -14642,3 +14716,16 @@ html.with-fancybox body.hide-scrollbar {
 .scroll-hidden::-webkit-scrollbar {
   display: none; /* Chrome, Safari */
 }
+
+.flag {
+  display: inline-block;
+  width: 16px;
+  aspect-ratio: 1;
+  background-image: url('../img/countries/flags16.png');
+  background-repeat: no-repeat;
+  filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, .5));
+}
+
+.eu {background-position: 0 -128px;}
+.ru {background-position: 0 -3104px;}
+.by {background-position: 0 -864px;}

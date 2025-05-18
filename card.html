@@ -10,7 +10,7 @@
 			opacity: 1;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=202505181640">
+	<link rel="stylesheet" href="css/style.min.css?_v=202505182121">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -717,7 +717,40 @@
 									<button> <picture><source srcset="img/card/favorites.webp" type="image/webp"><img src="img/card/favorites.png" alt="#"></picture></button>
 								</div>
 								<p class="content-car__price-number">179 190 ₽</p>
-								<p class="content-car__price-observer">60 наблюдателя(ей)</p>
+								<div class="content-car__price-row">
+									<p class="content-car__price-observer">60 наблюдателя(ей)</p>
+									<p class="content-car__price-observer">
+										<svg class="content-car__bids-status-icon">
+											<use href="img/products/sprite.svg#auction-hammer-line-custom"></use>
+										</svg>10 ставок
+									</p>
+								</div>
+								<div class="content-car__bids">
+									<table class="content-car__bids-table">
+										<thead>
+										<tr>
+											<th>Дата</th>
+											<th>Ставка (<span class="content-car__bids-status" title="Всего ставок"><svg class="content-car__bids-status-icon">
+														<use href="img/products/sprite.svg#auction-hammer-line-custom"></use>
+													</svg><span class="content-car__bids-status-count">10</span></span>)</th>
+										</tr>
+										</thead>
+										<tbody>
+										<tr>
+											<td>18 сен, 18:03</td>
+											<td>250 000 ₽</td>
+										</tr>
+										<tr>
+											<td>15 сен, 22:03</td>
+											<td>220 000 ₽</td>
+										</tr>
+										<tr>
+											<td>11 сен, 18:03</td>
+											<td>190 000 ₽</td>
+										</tr>
+										</tbody>
+									</table>
+								</div>
 							</div>
 							<div class="content-car__login">
 								<picture><source srcset="img/card/warning.webp" type="image/webp"><img src="img/card/warning.png" alt="#"></picture>
@@ -743,7 +776,7 @@
 
 							<div class="content-car__country">
 								<span class="flag ru content-car__country-icon"></span>
-								<span class="content-car__country-name">Москва, Россия</span>
+								<span class="content-car__country-name">Россия</span>
 							</div>
 						</div>
 					</div>
