@@ -386,6 +386,15 @@ span:not([class]):empty {
     --btn-text-clr: rgba(0, 0, 0, 0.6);
 }
 
+.ui-button--red {
+    --btn-clr: #D80000;
+    --btn-text-clr: #ffffff;
+}
+
+.ui-button--small {
+    min-height: 34px;
+}
+
 @media (hover: hover) {
     .ui-button--primary:hover {
         --btn-clr: var(--accent-color-darken-15);
@@ -394,6 +403,10 @@ span:not([class]):empty {
     .ui-button--gray:hover {
         --btn-clr: #c9c9c9;
         --btn-text-clr: rgba(0, 0, 0, 1);
+    }
+
+    .ui-button--red:hover {
+        --btn-clr: #b70000;
     }
 }
 
@@ -405,6 +418,10 @@ span:not([class]):empty {
     .ui-button--gray:active {
         --btn-clr: #c9c9c9;
         --btn-text-clr: rgba(0, 0, 0, 1);
+    }
+
+    .ui-button--red:active {
+        --btn-clr: #b70000;
     }
 }
 
@@ -672,13 +689,18 @@ span:not([class]):empty {
     }
 }
 
-.cabinet-tabs {}
+.cabinet-tabs {
+}
+
 .cabinet-tabs__titles {
     margin-bottom: 15px;
     display: flex;
     gap: 20px;
 }
-.cabinet-tabs__body {}
+
+.cabinet-tabs__body {
+}
+
 .cabinet-tabs__button {
     --tab-btn-clr: rgba(0, 0, 0, 0.6);
 
@@ -687,9 +709,11 @@ span:not([class]):empty {
     color: var(--tab-btn-clr);
     border-bottom: 1px solid currentColor;
 }
+
 .cabinet-tabs__button._tab-active {
     --tab-btn-clr: rgba(0, 0, 0, 1);
 }
+
 @media (hover: hover) {
     .cabinet-tabs__button:hover {
         --tab-btn-clr: rgba(0, 0, 0, 1);
@@ -738,8 +762,130 @@ span:not([class]):empty {
     .cabinet-tabs__button {
         font-size: 24px;
     }
+
     .balance-card__value {
         font-size: 36px;
+    }
+}
+
+.auction-cards {
+    display: flex;
+    flex-direction: column;
+    gap: var(--vertical-gap);
+}
+
+.auction-card {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 10px;
+    max-width: 805px;
+}
+
+.auction-card__main {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.auction-card__actions {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.auction-card__image {
+    max-width: 100%;
+}
+
+.auction-card__name {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.auction-card__indicators {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 10px;
+}
+
+.auction-card__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.auction-card__bid {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: var(--vertical-gap);
+}
+
+.auction-card__bid-column {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.auction-card__bid-label {
+    font-size: 14px;
+}
+
+.auction-card__bid-value {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.indicator {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.indicator__icon {
+    display: flex;
+    width: 1em;
+    height: 1em;
+    color: var(--accent-color);
+}
+
+.indicator__icon svg {
+    fill: currentColor;
+}
+
+.indicator__value {
+}
+
+@media (min-width: 1199.98px) {
+    .auction-card {
+        flex-wrap: nowrap;
+        padding: 20px 14px;
+        border-radius: 12px;
+        border: 1px solid var(--font-gray);
+    }
+
+    .auction-card__main {
+        max-width: 275px;
+    }
+
+    .auction-card__name {
+        font-size: 18px;
+    }
+
+    .auction-card__bid-label {
+        font-size: 20px;
+    }
+
+    .auction-card__bid-value {
+        font-size: 24px;
+    }
+
+    .auction-card__buttons {
+        max-width: 225px;
     }
 }
 
