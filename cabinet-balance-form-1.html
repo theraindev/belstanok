@@ -12,7 +12,7 @@
   </style>
   <link rel="stylesheet" href="css/style.min.css?_v=202505192140">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/cabinet-styles.css?_v=202505192140">
+  <link rel="stylesheet" href="css/cabinet-styles.css?_v=202505232200">
   <link rel="shortcut icon" href="favicon.ico">
   <!-- <meta name="robots" content="noindex, nofollow"> -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -202,9 +202,32 @@
                   </button>
                 </div>
                 <div class="cabinet-menu__body">
+                  <div class="cabinet-menu__nav cabinet-menu__nav--profile">
+                    <h4 class="cabinet-menu__nav-title">Ваш профиль</h4>
+                    <div class="cabinet-menu__nav-list">
+                      <a href="#" class="cabinet-menu__nav-link">
+                <span class="cabinet-menu__nav-icon">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_195_8670)">
+                    <path d="M4 22C4 19.8783 4.84285 17.8434 6.34315 16.3431C7.84344 14.8429 9.87827 14 12 14C14.1217 14 16.1566 14.8429 17.6569 16.3431C19.1571 17.8434 20 19.8783 20 22H18C18 20.4087 17.3679 18.8826 16.2426 17.7574C15.1174 16.6321 13.5913 16 12 16C10.4087 16 8.88258 16.6321 7.75736 17.7574C6.63214 18.8826 6 20.4087 6 22H4ZM12 13C8.685 13 6 10.315 6 7C6 3.685 8.685 1 12 1C15.315 1 18 3.685 18 7C18 10.315 15.315 13 12 13ZM12 11C14.21 11 16 9.21 16 7C16 4.79 14.21 3 12 3C9.79 3 8 4.79 8 7C8 9.21 9.79 11 12 11Z"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_195_8670">
+                    <rect width="24" height="24" fill="white"/>
+                    </clipPath>
+                    </defs>
+                  </svg>
+                </span>
+                        <span class="cabinet-menu__nav-text">
+                  <b>Иван</b>
+                  <div>Баланс: <b class="">10&nbsp;000&nbsp;р.</b></div>
+                </span>
+                      </a>
+                    </div>
+                  </div>
                   <nav class="cabinet-menu__nav">
                     <div class="cabinet-menu__nav-list">
-                      <a href="" class="cabinet-menu__nav-link">
+                      <a href="" class="cabinet-menu__nav-link isActive">
             <span class="cabinet-menu__nav-icon">
               <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g>
@@ -292,9 +315,9 @@
                         <span class="cabinet-menu__nav-text">Избранное</span>
                       </a>
 
-                      <a href="" class="cabinet-menu__nav-link">
+                      <a href="" class="cabinet-menu__nav-link cabinet-menu__nav-link--red">
             <span class="cabinet-menu__nav-icon">
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
               <g clip-path="url(#clip0_195_8740)">
               <path d="M4 18H6V20H18V4H6V6H4V3C4 2.73478 4.10536 2.48043 4.29289 2.29289C4.48043 2.10536 4.73478 2 5 2H19C19.2652 2 19.5196 2.10536 19.7071 2.29289C19.8946 2.48043 20 2.73478 20 3V21C20 21.2652 19.8946 21.5196 19.7071 21.7071C19.5196 21.8946 19.2652 22 19 22H5C4.73478 22 4.48043 21.8946 4.29289 21.7071C4.10536 21.5196 4 21.2652 4 21V18ZM6 11H13V13H6V16L1 12L6 8V11Z"/>
               </g>
@@ -1176,7 +1199,7 @@
                     <input type="radio" name="type" value="visa" id="visa"/>
                     <span class="form__radio-label payment-type-card">
                     <span class="payment-type-card__icon">
-                      <img src="img/cabinet/payment-types/visa.png" alt="" class="payment-type-card__img" />
+                      <img src="img/cabinet/payment-types/visa.svg" alt="" class="payment-type-card__img" />
                     </span>
                   </span>
                   </label>
@@ -1184,7 +1207,7 @@
                     <input type="radio" name="type" value="sbp" id="sbp"/>
                     <span class="form__radio-label payment-type-card">
                     <span class="payment-type-card__icon">
-                      <img src="img/cabinet/payment-types/sbp.png" alt="" class="payment-type-card__img" />
+                      <img src="img/cabinet/payment-types/sbp.svg" alt="" class="payment-type-card__img" />
                     </span>
                   </span>
                   </label>
@@ -1219,7 +1242,7 @@
             </div>
 
             <div class="form__inputs-475">
-              <button type="submit" class="ui-button ui-button--primary full-width">Заплатить</button>
+              <button type="submit" class="ui-button ui-button--primary full-width">Перейти к оплате</button>
             </div>
             <div class="form__inputs-475">
               <p class="center gray small-text">
@@ -1302,7 +1325,7 @@
   </footer>
 </div>
 <script src="js/app.min.js?_v=202505081800"></script>
-<script src="js/cabinet.js?_v=202505192140"></script>
+<script src="js/cabinet.js?_v=202505232200"></script>
 </body>
 
 </html>
