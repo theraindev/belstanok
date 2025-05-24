@@ -8,12 +8,14 @@
     cabinetLeftMenuToggle.forEach((element) => {
         element.addEventListener('click', (e) => {
             cabinetLeftMenu.classList.toggle('isVisible');
+            cabinetRightMenu.classList.remove('isVisible');
         });
     });
 
     cabinetRightMenuToggle.forEach((element) => {
         element.addEventListener('click', (e) => {
             cabinetRightMenu.classList.toggle('isVisible');
+            cabinetLeftMenu.classList.remove('isVisible');
         });
     });
 
