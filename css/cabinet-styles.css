@@ -331,6 +331,15 @@ span:not([class]):empty {
     font-weight: 500;
 }
 
+.form__input-label--required {
+    position: relative;
+}
+
+.form__input-label--required:after {
+    content: '*';
+    color: var(--font-red);
+}
+
 .form__input-field {
     --_border-color: var(--border-color, #d9d9d9);
     --_bg-color: var(--input-bg-color, white);
@@ -489,6 +498,14 @@ span:not([class]):empty {
 .form--personal-settings .form__input-wrapper--address,
 .form--personal-settings .form__buttons {
     grid-column: -1 / 1;
+}
+
+.form--organization {
+    max-width: 500px;
+}
+
+.form--organization .form__input-wrapper {
+    max-width: 415px;
 }
 
 .header__profile {
@@ -1172,6 +1189,24 @@ span:not([class]):empty {
 
 @media (min-width: 1440px) {
 
+}
+
+.table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.table--fixed {
+    table-layout: fixed;
+}
+
+.table td {
+    padding: 4px;
+    vertical-align: middle;
+}
+
+.organization-table td:last-child {
+    font-weight: 500;
 }
 
 svg {
