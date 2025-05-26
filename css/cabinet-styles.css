@@ -879,10 +879,17 @@ span:not([class]):empty {
     flex: 1;
 }
 
+.auction-card__data,
 .auction-card__buttons {
     flex: 1 0 auto;
     display: flex;
     flex-direction: column;
+    gap: 5px;
+}
+
+.auction-card__data-row {
+    flex: 0 0 auto;
+    display: flex;
     gap: 5px;
 }
 
@@ -968,6 +975,21 @@ span:not([class]):empty {
     gap: 5px;
 }
 
+.auction-card__data {
+    font-size: 16px;
+    gap: 10px;
+}
+
+.auction-card__data-label {
+    font-weight: 500;
+}
+
+.section--announcements {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+}
+
 @media (min-width: 768px) {
     .auction-card__price {
         gap: 10px;
@@ -976,6 +998,18 @@ span:not([class]):empty {
 
     .auction-card__price-old {
         font-size: 16px;
+    }
+
+    .auction-card__data-row {
+        flex-direction: column;
+    }
+
+    .auction-card__data-value {
+        font-size: 20px;
+    }
+
+    .section--announcements {
+        gap: 20px;
     }
 }
 
@@ -1335,6 +1369,10 @@ svg {
     --link-clr: var(--font-gray);
 }
 
+.accent {
+    color: var(--accent-color);
+}
+
 .custom-scroll {
     --scroll-bg-clr: rgba(0, 0, 0, .4);
     --scroll-bg-clr-hover: rgba(0, 0, 0, .55);
@@ -1449,4 +1487,35 @@ svg {
 
 .semibold {
     font-weight: 500;
+}
+
+.fs16 {
+    line-height: 1.26;
+}
+
+@supports (font-size: clamp( 1rem , 0.8522727273rem  +  1.3636363636vw , 1.14rem )) {
+    .fs16 {
+        font-size: clamp( 1rem , 0.8522727273rem  +  1.3636363636vw , 1.14rem );
+    }
+}
+@supports not (font-size: clamp( 1rem , 0.8522727273rem  +  1.3636363636vw , 1.14rem )) {
+    .fs16 {
+        font-size: calc(1rem + 0.75 * (100vw - 20rem) / 55);
+    }
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}
+
+@media (min-width: 1350px) {
+
+}
+
+@media (min-width: 1440px) {
+
 }
