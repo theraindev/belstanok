@@ -5818,6 +5818,39 @@
             mobileBreakpoint.addEventListener("change", handleSlider);
             handleSlider(mobileBreakpoint);
         }
+
+        if (document.querySelector(".simple-products__slider")) new swiper_core_Swiper(".simple-products__slider", {
+            modules: [ Navigation, Pagination, freeMode ],
+            touchReleaseOnEdges: true,
+            edgeSwipeDetection: true,
+            edgeSwipeThreshold: 20,
+            observer: true,
+            freeMode: true,
+            observeParents: true,
+            slidesPerView: 1.3,
+            spaceBetween: 20,
+            autoHeight: true,
+            speed: 800,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            },
+            navigation: {
+                prevEl: ".simple-products__button-prev",
+                nextEl: ".simple-products__button-next"
+            },
+            breakpoints: {
+                1440: {
+                    slidesPerView: 5
+                },
+                1350: {
+                    slidesPerView: 4
+                },
+                768: {
+                    slidesPerView: 3
+                }
+            }
+        });
     }
     document.addEventListener("DOMContentLoaded", (function() {
         initSliders();

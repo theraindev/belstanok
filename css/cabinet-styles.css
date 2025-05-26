@@ -86,10 +86,17 @@ span:not([class]):empty {
     color: rgba(0, 149, 255, 1);
 }
 
-.cabinet-page__left-menu {
+.cabinet-page__content {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 20px;
 }
 
-@media (min-width: 1199.98px) {
+@media (min-width: 1200px) {
+    .cabinet-page__content {
+        row-gap: 30px;
+    }
+
     .cabinet-menu {
         display: flex;
         flex-direction: column;
@@ -1207,6 +1214,112 @@ span:not([class]):empty {
 
 .organization-table td:last-child {
     font-weight: 500;
+}
+
+.simple-products {
+    --swiper-navigation-size: 24px;
+
+    position: relative;
+}
+
+.simple-products__title {
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 1em;
+}
+
+.simple-products__item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.simple-products__name {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.simple-products__image {
+    flex: 0 0 auto;
+    width: 100%;
+}
+
+.simple-products__image img {
+    display: block;
+    max-width: 100%;
+}
+
+.simple-products__button-prev,
+.simple-products__button-next {
+    color: black;
+    width: 45px;
+    height: 45px;
+    background-color: white;
+    border-radius: 45px;
+    border: 2px solid rgba(0, 0, 0, 0.4);
+}
+
+.simple-products__button-prev {}
+.simple-products__button-next {}
+
+.rating {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.rating__button {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.rating__button:hover,
+.rating__button:hover ~ .rating__button {
+    color: var(--accent-color);
+}
+
+.rating__icon {
+    display: block;
+    width: 1em;
+    height: 1em;
+}
+
+.empty-comments {
+    font-size: 15px;
+    max-width: 620px;
+}
+
+.empty-comments:not(:last-child) {
+    margin-bottom: 1em;
+}
+
+@media (min-width: 768px) {
+    .empty-comments,
+    .simple-products__name {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .empty-comments {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1350px) {
+    .simple-products__title {
+        font-weight: 500;
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1440px) {
+
+}
+
+picture:not([class]) {
+    display: contents;
 }
 
 svg {
