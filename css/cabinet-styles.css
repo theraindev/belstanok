@@ -267,6 +267,10 @@ span:not([class]):empty {
     --nav-link-bg: rgb(224 224 224);
 }
 
+.cabinet-page__left-menu .cabinet-menu__nav--profile {
+    display: none;
+}
+
 .cabinet-menu__nav--profile .cabinet-menu__nav-icon {
     opacity: 1;
 }
@@ -577,6 +581,11 @@ span:not([class]):empty {
 }
 
 @media (max-width: 1199.98px) {
+
+    .cabinet-page__left-menu .cabinet-menu__nav--profile {
+        display: block;
+    }
+
     .wrapper:has(.cabinet-menu.isVisible) {
         overflow: hidden;
         max-height: 100%;
