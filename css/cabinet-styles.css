@@ -7,25 +7,14 @@
     --secondary-font-family: Inter;
     --main-font-size: 16px;
     --accent-color: #0095FF;
+    --accent-color-alfa-10: rgba(0, 149, 255, 0.1);
+    --accent-color-alfa-20: rgba(0, 149, 255, 0.2);
     --accent-color-darken-15: #007AD1;
     --font-gray: #9f9f9f;
     --font-red: #D80000;
     --drop-shadow: drop-shadow(0 2px 8px rgb(212, 212, 212));
-    --container-size: 88rem;
 
     accent-color: var(--accent-color);
-}
-
-@media (min-width: 1350px) {
-    :root {
-        --container-size: 94rem;
-    }
-}
-
-@media (min-width: 1440px) {
-    :root {
-        --container-size: 110rem;
-    }
 }
 
 span:not([class]):empty {
@@ -49,6 +38,14 @@ span:not([class]):empty {
 
 .cabinet-page__title {
     font-size: 20px;
+}
+
+.section__title {
+    font-size: 18px;
+}
+
+.section__title,
+.cabinet-page__title {
     font-weight: 500;
     margin-block: 0 0.75em;
 }
@@ -119,6 +116,10 @@ span:not([class]):empty {
 
     .cabinet-page__title {
         font-size: 32px;
+    }
+
+    .section__title {
+        font-size: 26px;
     }
 
     .cabinet-page__left-menu {
@@ -263,7 +264,6 @@ span:not([class]):empty {
 }
 
 .cabinet-menu__nav--profile {
-    display: none;
     --nav-link-bg: rgb(224 224 224);
 }
 
@@ -332,6 +332,17 @@ span:not([class]):empty {
     display: flex;
     flex-direction: column;
     gap: 5px;
+}
+
+.form__input-row {
+    display: flex;
+    gap: 10px;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.form__input-row .form__input-wrapper {
+    flex-grow: 1;
 }
 
 .form__input-label {
@@ -454,6 +465,10 @@ span:not([class]):empty {
     min-height: 34px;
 }
 
+.ui-button--width-380 {
+    max-width: 380px;
+}
+
 @media (hover: hover) {
     .ui-button--primary:hover {
         --btn-clr: var(--accent-color-darken-15);
@@ -494,7 +509,7 @@ span:not([class]):empty {
 
 .form--personal-settings {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(max(30%, 200px), 1fr));
 }
 
 .form--personal-settings .form__submit {
@@ -521,16 +536,20 @@ span:not([class]):empty {
 
 .profile-ctrl {
     display: inline-flex;
-    flex-direction: column;
-    align-items: start;
+    flex-flow: row nowrap;
+    align-items: center;
     gap: 5px;
     border-radius: 12px;
-    padding: 5px 10px;
+    padding: 5px 15px;
     border: 1px solid rgba(0, 0, 0, .4);
     font-weight: 500;
+    line-height: 1;
+    min-height: 46px;
 }
 
-.profile-ctrl__name {
+.profile-ctrl__icon {
+    width: 20px;
+    opacity: 0.75;
 }
 
 .profile-ctrl__balance {
@@ -984,6 +1003,8 @@ span:not([class]):empty {
     font-weight: 500;
 }
 
+.section__title {}
+
 .section--announcements,
 .section--bids {
     display: grid;
@@ -1048,10 +1069,6 @@ span:not([class]):empty {
         border-bottom: 1px solid rgba(0, 0, 0, 0.2);
         padding-bottom: 20px;
     }
-
-    .cabinet-menu__nav--profile {
-        display: block;
-    }
 }
 
 @media (min-width: 576px) {
@@ -1062,10 +1079,6 @@ span:not([class]):empty {
 }
 
 @media (min-width: 1199.98px) {
-    .cabinet-menu__nav--profile {
-        display: none;
-    }
-
     .auction-card {
         flex-wrap: nowrap;
         padding: 20px;
@@ -1445,6 +1458,45 @@ span:not([class]):empty {
 
 }
 
+.alert {
+    --_alert-border-clr: var(--alert-border-clr, rgba(0, 0, 0, 0.2));
+    --_alert-bg-clr: var(--alert-bg-clr, #fafafa);
+
+    display: flex;
+    align-items: flex-start;
+    padding: 15px 15px 15px 15px;
+    border-radius: 12px;
+    border: 1px solid var(--_alert-border-clr);
+    background-color: var(--_alert-bg-clr);
+    gap: 12px;
+}
+
+.alert:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+.alert__icon {
+    display: inline-flex;
+    line-height: 1;
+    flex: 0 0 24px;
+    color: var(--accent-color);
+}
+
+.alert__icon svg {
+    width: 100%;
+    display: block;
+    fill: currentColor;
+}
+
+.alert__text {
+    align-self: center;
+}
+
+.alert--attention {
+    --alert-border-clr: var(--accent-color-alfa-20);
+    --alert-bg-clr: var(--accent-color-alfa-10);
+}
+
 picture:not([class]) {
     display: contents;
 }
@@ -1539,6 +1591,10 @@ svg {
     text-decoration: none;
     border-bottom: 1px solid currentColor;
     transition: color 0.1s linear, border-color 0.1s linear;
+}
+
+.link--dotted {
+    border-bottom: 1px dotted;
 }
 
 @media (hover: hover) {

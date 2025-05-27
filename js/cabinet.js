@@ -41,4 +41,22 @@
             });
         }
     }
+
+    const changePasswordFormShowButton = document.getElementById('js-change-password-show-button');
+    const changePasswordFormHideButton = document.getElementById('js-change-password-hide-button');
+
+    function setChangePasswordFormVisibility(status) {
+        const changePasswordForm = document.getElementById('js-change-password-form');
+
+        changePasswordForm.hidden = !status;
+        changePasswordFormShowButton.style.display = status ? 'none' : 'inline-flex';
+    }
+
+    changePasswordFormShowButton.addEventListener('click', function (e) {
+        setChangePasswordFormVisibility(true);
+    });
+
+    changePasswordFormHideButton.addEventListener('click', function (e) {
+        setChangePasswordFormVisibility(false);
+    });
 }());
