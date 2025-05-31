@@ -1452,6 +1452,59 @@ span:not([class]):empty {
     gap: .3125em;
 }
 
+.help-links {
+    font-family: var(--secondary-font-family), sans-serif;
+    gap: 12px;
+    -moz-column-fill: initial;
+    -webkit-column-fill: initial;
+    column-fill: initial;
+    -moz-column-count: 1;
+    -webkit-column-count: 1;
+    column-count: 1;
+}
+
+.help-links__group {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+
+    margin-bottom: 1em;
+}
+
+.help-links__group-title {
+    font-weight: 600;
+    font-size: var(--h3-fs);
+    margin-bottom: .5em;
+    color: var(--font-gray);
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+.help-links__list {
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3125em;
+    margin-left: 0.75em;
+}
+
+.help-links__link {
+    color: var(--accent-color);
+    transition: color 0.1s linear;
+}
+
+.help-links__link:hover {
+    color: var(--font-red);
+}
+
+@media (min-width: 768px) {
+    .help-links {
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+    }
+}
+
 @media (min-width: 1200px) {
     .manager-card {
         font-size: 0.875em;
