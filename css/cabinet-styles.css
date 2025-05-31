@@ -1423,6 +1423,45 @@ span:not([class]):empty {
 
 }
 
+.manager-card {
+    display: inline-flex;
+    align-items: start;
+    gap: 1em;
+    padding: 1em;
+    border-radius: 8px;
+    background-color: var(--accent-color-alfa-10);
+}
+
+.manager-card__icon {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.9125em;
+    border-radius: 8px;
+    background-color: var(--accent-color-alfa-10);
+}
+
+.manager-card__icon svg {
+    width: 15px;
+}
+
+.manager-card__info {
+    display: flex;
+    flex-direction: column;
+    gap: .3125em;
+}
+
+@media (min-width: 1200px) {
+    .manager-card {
+        font-size: 0.875em;
+    }
+
+    .manager-card__icon svg {
+        width: 25px;
+    }
+}
+
 .alert {
     --_alert-border-clr: var(--alert-border-clr, rgba(0, 0, 0, 0.2));
     --_alert-bg-clr: var(--alert-bg-clr, #fafafa);
