@@ -938,6 +938,18 @@ span:not([class]):empty {
     font-size: var(--_card-name-fs);
 }
 
+.auction-card__name-link {
+    color: var(--accent-color);
+
+    transition: color 0.1s ease-in-out;
+}
+
+@media (hover: hover) {
+    .auction-card__name-link:hover {
+        color: var(--font-red);
+    }
+}
+
 .auction-card__indicators {
     display: flex;
     flex-flow: row nowrap;
@@ -1584,10 +1596,13 @@ svg {
 }
 
 .link {
-    color: var(--link-clr);
+    color: var(--link-clr, black);
     text-decoration: none;
-    border-bottom: 1px solid currentColor;
     transition: color 0.1s linear, border-color 0.1s linear;
+}
+
+.link--underline {
+    border-bottom: 1px solid;
 }
 
 .link--dotted {
