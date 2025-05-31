@@ -12,7 +12,7 @@
   </style>
   <link rel="stylesheet" href="css/style.min.css?_v=202505192140">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/cabinet-styles.css?_v=202505271600">
+  <link rel="stylesheet" href="css/cabinet-styles.css?_v=202505311400">
   <link rel="shortcut icon" href="favicon.ico">
   <!-- <meta name="robots" content="noindex, nofollow"> -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1199,14 +1199,17 @@
                     </div>
                     <div class="auction-card__buttons">
                       <button type="button" class="ui-button ui-button--primary full-width ui-button--small">Выставить на аукцион</button>
-                      <button type="button" class="ui-button ui-button--primary full-width ui-button--small">Поднять просмотры</button>
                       <div class="auction-card__buttons-row">
-                        <button type="button" class="ui-button ui-button--primary full-width ui-button--small">Рассылка</button>
-                        <button type="button" class="ui-button ui-button--secondary ui-button--secondary-blue full-width ui-button--small">...</button>
+                        <button type="button" class="ui-button ui-button--primary full-width ui-button--small">Поднять</button>
+                        <button type="button" data-dropdown-target="auction-card-dropdown" target="auction-card-dropdown" class="ui-button ui-button--secondary ui-button--secondary-blue full-width ui-button--small">...</button>
+                        <div class="auction-card__dropdown ui-dropdown ui-dropdown--open" data-dropdown="auction-card-dropdown">
+                          <div class="ui-dropdown__list">
+                            <a href="#" class="ui-dropdown__link">Редактировать</a>
+                            <a href="#" class="ui-dropdown__link">Забронировать</a>
+                            <a href="#" class="ui-dropdown__link">Снять с публикации</a>
+                          </div>
+                        </div>
                       </div>
-                      <button type="button" class="ui-button ui-button--secondary ui-button--secondary-gray full-width ui-button--small">Редактировать</button>
-                      <button type="button" class="ui-button ui-button--secondary ui-button--secondary-gray full-width ui-button--small">Забронировать</button>
-                      <button type="button" class="ui-button ui-button--secondary ui-button--secondary-gray full-width ui-button--small">Снять с публикации</button>
                     </div>
                   </div>
                   <div class="auction-card">
@@ -1258,10 +1261,16 @@
                     </div>
                     <div class="auction-card__buttons">
                       <button type="button" class="ui-button ui-button--primary full-width ui-button--small">Выставить на аукцион</button>
-                      <button type="button" class="ui-button ui-button--primary full-width ui-button--small">Поднять просмотры</button>
                       <div class="auction-card__buttons-row">
-                        <button type="button" class="ui-button ui-button--primary full-width ui-button--small">Рассылка</button>
-                        <button type="button" class="ui-button ui-button--secondary ui-button--secondary-blue full-width ui-button--small">...</button>
+                        <button type="button" class="ui-button ui-button--primary full-width ui-button--small">Поднять</button>
+                        <button type="button" data-dropdown-target="auction-card-dropdown-1" class="ui-button ui-button--secondary ui-button--secondary-blue full-width ui-button--small">...</button>
+                        <div class="auction-card__dropdown ui-dropdown ui-dropdown--open" data-dropdown="auction-card-dropdown-1">
+                          <div class="ui-dropdown__list">
+                            <a href="#" class="ui-dropdown__link">Редактировать</a>
+                            <a href="#" class="ui-dropdown__link">Забронировать</a>
+                            <a href="#" class="ui-dropdown__link">Снять с публикации</a>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -1344,8 +1353,8 @@
     </div>
   </footer>
 </div>
-<script src="js/app.min.js?_v=202505181400"></script>
-<script src="js/cabinet.js?_v=202505271600"></script>
+<script src="js/app.min.js?_v=202505311400"></script>
+<script src="js/cabinet.js?_v=202505311400"></script>
 </body>
 
 </html>

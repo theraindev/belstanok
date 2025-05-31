@@ -103,18 +103,12 @@ h6 {
 
 :root {
   font-size: 14px;
-  --container-size: 75rem;
+  --container-size: 1140px;
 }
 
-@media (min-width: 90rem) {
+@media (min-width: 1366px) {
   :root {
-    --container-size: 85rem;
-  }
-}
-
-@media (min-width: 110rem) {
-  :root {
-    --container-size: 100rem;
+    --container-size: 1280px;
   }
 }
 

@@ -42,8 +42,17 @@
         }
     }
 
+    initChangePasswordFieldsVisibility();
+    initTooltips();
+}());
+
+function initChangePasswordFieldsVisibility() {
     const changePasswordFormShowButton = document.getElementById('js-change-password-show-button');
     const changePasswordFormHideButton = document.getElementById('js-change-password-hide-button');
+
+    if (!changePasswordFormShowButton || !changePasswordFormHideButton) {
+        return;
+    }
 
     function setChangePasswordFormVisibility(status) {
         const changePasswordForm = document.getElementById('js-change-password-form');
@@ -59,4 +68,34 @@
     changePasswordFormHideButton.addEventListener('click', function (e) {
         setChangePasswordFormVisibility(false);
     });
-}());
+}
+
+function initTooltips() {
+    const tooltips = document.querySelectorAll('[data-dropdown-target]');
+
+    const showTooltip = (e) => {
+        const target = e.target.dataset.dropdownTarget;
+
+        if (!target) return;
+
+        const tooltip = document.querySelector(`[data-dropdown="${target}"]`);
+        tooltip.classList.add('isVisible');
+
+        handleTooltipClose(e.target, tooltip);
+    };
+
+    const handleTooltipClose = (button, tooltip) => {
+        // Скрытие при клике вне кнопки
+        document.addEventListener('click', (e) => {
+            if (!button.contains(e.target) && !tooltip.contains(e.target)) {
+                tooltip.classList.remove('isVisible');
+
+                document.removeEventListener('click', handleTooltipClose);
+            }
+        });
+    }
+
+    tooltips.forEach((element) => {
+        element.addEventListener('click', showTooltip);
+    });
+}

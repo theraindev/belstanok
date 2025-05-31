@@ -5840,10 +5840,7 @@
                 nextEl: ".simple-products__button-next"
             },
             breakpoints: {
-                1440: {
-                    slidesPerView: 5
-                },
-                1350: {
+                1200: {
                     slidesPerView: 4
                 },
                 768: {
