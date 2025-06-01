@@ -1715,7 +1715,9 @@ span:not([class]):empty {
     --alert-bg-clr: var(--accent-color-alfa-10);
 }
 
-.messages {}
+.messages p:not(:last-child) {
+    margin-bottom: 5px;
+}
 
 .messages th,
 .messages td {
@@ -1925,6 +1927,10 @@ svg {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.text-right {
+    text-align: right;
 }
 
 @supports (font-size: clamp( 1rem , 0.8522727273rem  +  1.3636363636vw , 1.14rem )) {
