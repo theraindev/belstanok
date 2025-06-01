@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <title>Сообщения</title>
+  <meta charset="UTF-8">
+  <meta name="format-detection" content="telephone=no">
+  <style>
+      body {
+          opacity: 1;
+      }
+  </style>
+  <link rel="stylesheet" href="css/style.min.css?_v=202505192140">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/cabinet-styles.css?_v=202505311400">
+  <link rel="shortcut icon" href="favicon.ico">
+  <!-- <meta name="robots" content="noindex, nofollow"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+<div class="wrapper">
+  <header data-scroll="150" data-scroll-show class="header">
+    <div class="header__container">
+      <div class="header__top">
+        <div class="header__top-block">
+          <div class="header__info">
+            <img class="header__info-img" src="img/header/info.svg" alt="#">
+            <p class="header__info-text"><span>О нас</span> <img class="header__top-arrow" src="img/header/arrow.svg" alt="#"></p>
+            <ul class="sub-list">
+              <li><a href="#">О&nbsp;компании</a></li>
+              <li><a href="#">Отзывы</a></li>
+              <li><a href="#">Реквизиты</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+          </div>
+          <a class="header__car" href="/public">
+            <img class="header__car-img" src="img/header/car.svg" alt="#">
+            <p class="header__car-text"><span>Доставка и оплата</span></p>
+          </a>
+          <div data-spollers="992,max" class="header__phone">
+            <div class="header__phone">
+              <button type="button" data-spoller class="header__phone-text" style="font-size: smaller">Контакты <img class="header__top-arrow" src="img/header/arrow.svg" alt="#"></button>
+              <div class="sub-list sub-list--phone">
+                <div class="sub-list__block">
+                  <p class="sub-list__text">Обработка заявок круглосуточно</p>
+                  <a href="tel:71234567890" class="sub-list__phone"><picture><source srcset="img/header/bil.webp" type="image/webp"><img src="img/header/bil.png" alt="#"></picture>+7
+                    (123)
+                    456-78-90</a>
+                  <a href="tel:71234567890" class="sub-list__phone"><picture><source srcset="img/header/mts.webp" type="image/webp"><img src="img/header/mts.png" alt="#"></picture>+7
+                    (123)
+                    456-78-90</a>
+                  <a class="sub-list__mail" href="mailto:belstanok@info.ru"><picture><source srcset="img/header/sub-message.webp" type="image/webp"><img src="img/header/sub-message.png" alt=""></picture>
+                    belstanok@info.ru</a>
+                </div>
+                <div class="sub-list__buttons">
+                  <a href="#" class="sub-list__button sub-list__button--green"><picture><source srcset="img/header/whatsap.webp" type="image/webp"><img src="img/header/whatsap.png" alt="#"></picture><span>WhatsApp</span></a>
+                  <a href="#" class="sub-list__button "><picture><source srcset="img/header/telega.webp" type="image/webp"><img src="img/header/telega.png" alt="#"></picture><span>Telegram</span></a>
+
+                </div>
+                <div class="sub-list__block">
+                  <div class="sub-list__addres">
+                    <picture><source srcset="img/header/local.webp" type="image/webp"><img src="img/header/local.png" alt="#"></picture>
+                    <p class="sub-list__text">г.Минск, 1-й Твёрдый
+                      переулок, 11к3, 1-й этаж</p>
+
+                  </div>
+                  <div class="sub-list__clock">
+                    <picture><source srcset="img/header/clock.webp" type="image/webp"><img src="img/header/clock.png" alt="#"></picture>
+                    <p class="sub-list__text">
+                      <strong>График работы офиса</strong>
+                      Пн-Пт 8:00 - 18:00
+                      Сб 9:30 - 16:30
+                      Вс 10:00 - 15:00 (Прием
+                      заявок.Офис и склад не
+                      работает)
+                      пн-пт 9:00 - 18:00
+                      (Выписка документов ТН и
+                      ТТН для юр. лиц)
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-da=".menu, 992" class="header__top-block header__top-block--phone">
+          <div class="header__mail">
+            <img class="header__phone-img" src="img/header/phone.svg" alt="#">
+            <a href="tel:71234567890" class="header__mail-text">+7 (123) 456-78-90</a>
+          </div>
+          <!-- <div class="header__phone">
+        <img class="header__phone-img" src="img/header/phone.svg" alt="#">
+        <a href="tel:79267095126" class="header__phone-text">Доставка и оплата <img class="header__top-arrow"
+            src="img/header/arrow.svg" alt="#"></a>
+        <div class="sub-list sub-list--phone">
+          <div class="sub-list__block">
+            <p class="sub-list__text">Обработка заявок круглосуточно</p>
+            <a href="tel:71234567890" class="sub-list__phone"><picture><source srcset="img/header/bil.webp" type="image/webp"><img src="img/header/bil.png" alt="#"></picture>+7 (123)
+              456-78-90</a>
+            <a href="tel:71234567890" class="sub-list__phone"><picture><source srcset="img/header/mts.webp" type="image/webp"><img src="img/header/mts.png" alt="#"></picture>+7 (123)
+              456-78-90</a>
+            <a class="sub-list__mail" href="mailto:belstanok@info.ru"><img src="img/header/sub-message.png"
+                alt="">
+              belstanok@info.ru</a>
+          </div>
+          <div class="sub-list__buttons">
+            <a href="#" class="sub-list__button sub-list__button--green"><img src="img/header/whatsap.png"
+                alt="#"><span>Перейти в WhatsApp</span></a>
+            <a href="#" class="sub-list__button "><picture><source srcset="img/header/telega.webp" type="image/webp"><img src="img/header/telega.png" alt="#"></picture><span>Перейти в
+                Telegram</span></a>
+
+          </div>
+          <div class="sub-list__block">
+            <div class="sub-list__addres">
+              <picture><source srcset="img/header/local.webp" type="image/webp"><img src="img/header/local.png" alt="#"></picture>
+              <p class="sub-list__text">г.Минск, 1-й Твёрдый
+                переулок, 11к3, 1-й этаж</p>
+
+            </div>
+            <div class="sub-list__clock">
+              <picture><source srcset="img/header/clock.webp" type="image/webp"><img src="img/header/clock.png" alt="#"></picture>
+              <p class="sub-list__text">
+                <strong>График работы офиса</strong>
+                Пн-Пт 8:00 - 18:00
+                Сб 9:30 - 16:30
+                Вс 10:00 - 15:00 (Прием
+                заявок.Офис и склад не
+                работает)
+                пн-пт 9:00 - 18:00
+                (Выписка документов ТН и
+                ТТН для юр. лиц)
+              </p>
+            </div>
+          </div>
+        </div>
+      </div> -->
+        </div>
+        <button type="button" class="menu__icon icon-menu"><span></span></button>
+
+      </div>
+      <div class="header__main-body">
+        <div class="header__first">
+          <div class="header__first-sec" style="display: none"></div>
+          <div class="header__first-third">
+            <a href="#">
+              <div class="header__first-third-tg">
+                <picture><source srcset="img/header/telegram.webp" type="image/webp"><img src="img/header/telegram.png" alt=""></picture>
+              </div>
+            </a>
+            <a href="#">
+              <div class="header__first-third-wh">
+                <picture><source srcset="img/header/whatsapp.webp" type="image/webp"><img src="img/header/whatsapp.png" alt=""></picture>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="header__main">
+          <a data-da=".header__first, 768,0" href="#" class="header__logo"><img src="img/header/logo.svg" alt="#">
+
+          </a>
+          <button class="header__catalog">
+            <img class="header__catalog-icon" src="img/header/catalog.svg" alt="#">
+            <p class="header__catalog-text">КАТАЛОГ</p>
+
+          </button>
+          <form class="header__search">
+            <input autocomplete="off" type="text" name="search" placeholder="Поиск по сайту" class="header__search-input input">
+            <button class="header__search-button" type="submit"><picture><source srcset="img/header/search.webp" type="image/webp"><img src="img/header/search.png" alt="#"></picture></button>
+          </form>
+          <div class="header__tools">
+            <!-- <button class="header__money">
+          <img src="img/header/money.svg" alt="#">
+        </button> -->
+            <button data-da=".header__first-sec, 768,0" class="header__bookmark">
+              <img src="img/header/bookmark.svg" alt="">
+
+            </button>
+          </div>
+          <div class="header__profile">
+            <button type="button" data-spoller="" class="header__profile-button profile-ctrl">
+              <span class="profile-ctrl__icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_195_8670)"><path d="M4 22C4 19.8783 4.84285 17.8434 6.34315 16.3431C7.84344 14.8429 9.87827 14 12 14C14.1217 14 16.1566 14.8429 17.6569 16.3431C19.1571 17.8434 20 19.8783 20 22H18C18 20.4087 17.3679 18.8826 16.2426 17.7574C15.1174 16.6321 13.5913 16 12 16C10.4087 16 8.88258 16.6321 7.75736 17.7574C6.63214 18.8826 6 20.4087 6 22H4ZM12 13C8.685 13 6 10.315 6 7C6 3.685 8.685 1 12 1C15.315 1 18 3.685 18 7C18 10.315 15.315 13 12 13ZM12 11C14.21 11 16 9.21 16 7C16 4.79 14.21 3 12 3C9.79 3 8 4.79 8 7C8 9.21 9.79 11 12 11Z"/></g><defs><clipPath id="clip0_195_8670"><rect width="24" height="24" fill="white"/></clipPath></defs></svg>
+              </span>
+              <span class="profile-ctrl__name">Иван</span>
+
+            </button>
+            <div class="header__profile-dropdown">
+              <aside class="cabinet-page__right-menu cabinet-menu">
+                <div class="cabinet-menu__head">
+                  <h3 class="cabinet-menu__title">Меню</h3>
+                  <button class="cabinet-menu__close cabinet-menu__right-toggle menu-btn" type="button">
+          <span class="menu-btn__icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="transform:rotate(45deg);">
+                <g clip-path="url(#clip0_195_5527)">
+                <path d="M11 11V5H13V11H19V13H13V19H11V13H5V11H11Z" fill="currentColor"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_195_5527">
+                <rect width="24" height="24" fill="white"/>
+                </clipPath>
+                </defs>
+                </svg>
+          </span>
+                  </button>
+                </div>
+                <div class="cabinet-menu__body">
+                  <div class="cabinet-menu__nav cabinet-menu__nav--profile">
+                    <h4 class="cabinet-menu__nav-title">Ваш профиль</h4>
+                    <div class="cabinet-menu__nav-list">
+                      <a href="#" class="cabinet-menu__nav-link">
+                <span class="cabinet-menu__nav-icon">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_195_8670)">
+                    <path d="M4 22C4 19.8783 4.84285 17.8434 6.34315 16.3431C7.84344 14.8429 9.87827 14 12 14C14.1217 14 16.1566 14.8429 17.6569 16.3431C19.1571 17.8434 20 19.8783 20 22H18C18 20.4087 17.3679 18.8826 16.2426 17.7574C15.1174 16.6321 13.5913 16 12 16C10.4087 16 8.88258 16.6321 7.75736 17.7574C6.63214 18.8826 6 20.4087 6 22H4ZM12 13C8.685 13 6 10.315 6 7C6 3.685 8.685 1 12 1C15.315 1 18 3.685 18 7C18 10.315 15.315 13 12 13ZM12 11C14.21 11 16 9.21 16 7C16 4.79 14.21 3 12 3C9.79 3 8 4.79 8 7C8 9.21 9.79 11 12 11Z"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_195_8670">
+                    <rect width="24" height="24" fill="white"/>
+                    </clipPath>
+                    </defs>
+                  </svg>
+                </span>
+                        <span class="cabinet-menu__nav-text">
+                  <b>Иван</b>
+                  <div>Баланс: <b class="">10&nbsp;000&nbsp;р.</b></div>
+                </span>
+                      </a>
+                    </div>
+                  </div>
+                  <nav class="cabinet-menu__nav">
+                    <div class="cabinet-menu__nav-list">
+                      <a href="" class="cabinet-menu__nav-link">
+            <span class="cabinet-menu__nav-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                <path d="M2 18C2 16.4596 2 15.6893 2.34673 15.1235C2.54074 14.8069 2.80693 14.5407 3.12353 14.3467C3.68934 14 4.45956 14 6 14C7.54044 14 8.31066 14 8.87647 14.3467C9.19307 14.5407 9.45926 14.8069 9.65327 15.1235C10 15.6893 10 16.4596 10 18C10 19.5404 10 20.3107 9.65327 20.8765C9.45926 21.1931 9.19307 21.4593 8.87647 21.6533C8.31066 22 7.54044 22 6 22C4.45956 22 3.68934 22 3.12353 21.6533C2.80693 21.4593 2.54074 21.1931 2.34673 20.8765C2 20.3107 2 19.5404 2 18Z" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M14 18C14 16.4596 14 15.6893 14.3467 15.1235C14.5407 14.8069 14.8069 14.5407 15.1235 14.3467C15.6893 14 16.4596 14 18 14C19.5404 14 20.3107 14 20.8765 14.3467C21.1931 14.5407 21.4593 14.8069 21.6533 15.1235C22 15.6893 22 16.4596 22 18C22 19.5404 22 20.3107 21.6533 20.8765C21.4593 21.1931 21.1931 21.4593 20.8765 21.6533C20.3107 22 19.5404 22 18 22C16.4596 22 15.6893 22 15.1235 21.6533C14.8069 21.4593 14.5407 21.1931 14.3467 20.8765C14 20.3107 14 19.5404 14 18Z" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M2 6C2 4.45956 2 3.68934 2.34673 3.12353C2.54074 2.80693 2.80693 2.54074 3.12353 2.34673C3.68934 2 4.45956 2 6 2C7.54044 2 8.31066 2 8.87647 2.34673C9.19307 2.54074 9.45926 2.80693 9.65327 3.12353C10 3.68934 10 4.45956 10 6C10 7.54044 10 8.31066 9.65327 8.87647C9.45926 9.19307 9.19307 9.45926 8.87647 9.65327C8.31066 10 7.54044 10 6 10C4.45956 10 3.68934 10 3.12353 9.65327C2.80693 9.45926 2.54074 9.19307 2.34673 8.87647C2 8.31066 2 7.54044 2 6Z" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M14 6C14 4.45956 14 3.68934 14.3467 3.12353C14.5407 2.80693 14.8069 2.54074 15.1235 2.34673C15.6893 2 16.4596 2 18 2C19.5404 2 20.3107 2 20.8765 2.34673C21.1931 2.54074 21.4593 2.80693 21.6533 3.12353C22 3.68934 22 4.45956 22 6C22 7.54044 22 8.31066 21.6533 8.87647C21.4593 9.19307 21.1931 9.45926 20.8765 9.65327C20.3107 10 19.5404 10 18 10C16.4596 10 15.6893 10 15.1235 9.65327C14.8069 9.45926 14.5407 9.19307 14.3467 8.87647C14 8.31066 14 7.54044 14 6Z" stroke="currentColor" stroke-width="1.8"/>
+                </g>
+              </svg>
+            </span>
+                        <span class="cabinet-menu__nav-text">Мой кабинет</span>
+                      </a>
+
+                      <a href="" class="cabinet-menu__nav-link">
+              <span class="cabinet-menu__nav-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_195_8670)">
+                  <path d="M4 22C4 19.8783 4.84285 17.8434 6.34315 16.3431C7.84344 14.8429 9.87827 14 12 14C14.1217 14 16.1566 14.8429 17.6569 16.3431C19.1571 17.8434 20 19.8783 20 22H18C18 20.4087 17.3679 18.8826 16.2426 17.7574C15.1174 16.6321 13.5913 16 12 16C10.4087 16 8.88258 16.6321 7.75736 17.7574C6.63214 18.8826 6 20.4087 6 22H4ZM12 13C8.685 13 6 10.315 6 7C6 3.685 8.685 1 12 1C15.315 1 18 3.685 18 7C18 10.315 15.315 13 12 13ZM12 11C14.21 11 16 9.21 16 7C16 4.79 14.21 3 12 3C9.79 3 8 4.79 8 7C8 9.21 9.79 11 12 11Z"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_195_8670">
+                  <rect width="24" height="24" fill="white"/>
+                  </clipPath>
+                  </defs>
+                </svg>
+              </span>
+                        <span class="cabinet-menu__nav-text">Личные данные</span>
+                      </a>
+
+                      <a href="" class="cabinet-menu__nav-link">
+            <span class="cabinet-menu__nav-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                <path d="M2 18C2 16.4596 2 15.6893 2.34673 15.1235C2.54074 14.8069 2.80693 14.5407 3.12353 14.3467C3.68934 14 4.45956 14 6 14C7.54044 14 8.31066 14 8.87647 14.3467C9.19307 14.5407 9.45926 14.8069 9.65327 15.1235C10 15.6893 10 16.4596 10 18C10 19.5404 10 20.3107 9.65327 20.8765C9.45926 21.1931 9.19307 21.4593 8.87647 21.6533C8.31066 22 7.54044 22 6 22C4.45956 22 3.68934 22 3.12353 21.6533C2.80693 21.4593 2.54074 21.1931 2.34673 20.8765C2 20.3107 2 19.5404 2 18Z" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M14 18C14 16.4596 14 15.6893 14.3467 15.1235C14.5407 14.8069 14.8069 14.5407 15.1235 14.3467C15.6893 14 16.4596 14 18 14C19.5404 14 20.3107 14 20.8765 14.3467C21.1931 14.5407 21.4593 14.8069 21.6533 15.1235C22 15.6893 22 16.4596 22 18C22 19.5404 22 20.3107 21.6533 20.8765C21.4593 21.1931 21.1931 21.4593 20.8765 21.6533C20.3107 22 19.5404 22 18 22C16.4596 22 15.6893 22 15.1235 21.6533C14.8069 21.4593 14.5407 21.1931 14.3467 20.8765C14 20.3107 14 19.5404 14 18Z" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M2 6C2 4.45956 2 3.68934 2.34673 3.12353C2.54074 2.80693 2.80693 2.54074 3.12353 2.34673C3.68934 2 4.45956 2 6 2C7.54044 2 8.31066 2 8.87647 2.34673C9.19307 2.54074 9.45926 2.80693 9.65327 3.12353C10 3.68934 10 4.45956 10 6C10 7.54044 10 8.31066 9.65327 8.87647C9.45926 9.19307 9.19307 9.45926 8.87647 9.65327C8.31066 10 7.54044 10 6 10C4.45956 10 3.68934 10 3.12353 9.65327C2.80693 9.45926 2.54074 9.19307 2.34673 8.87647C2 8.31066 2 7.54044 2 6Z" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M14 6C14 4.45956 14 3.68934 14.3467 3.12353C14.5407 2.80693 14.8069 2.54074 15.1235 2.34673C15.6893 2 16.4596 2 18 2C19.5404 2 20.3107 2 20.8765 2.34673C21.1931 2.54074 21.4593 2.80693 21.6533 3.12353C22 3.68934 22 4.45956 22 6C22 7.54044 22 8.31066 21.6533 8.87647C21.4593 9.19307 21.1931 9.45926 20.8765 9.65327C20.3107 10 19.5404 10 18 10C16.4596 10 15.6893 10 15.1235 9.65327C14.8069 9.45926 14.5407 9.19307 14.3467 8.87647C14 8.31066 14 7.54044 14 6Z" stroke="currentColor" stroke-width="1.8"/>
+                </g>
+              </svg>
+            </span>
+                        <span class="cabinet-menu__nav-text">Мои организации</span>
+                      </a>
+
+                      <a href="" class="cabinet-menu__nav-link">
+            <span class="cabinet-menu__nav-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                <path d="M2 18C2 16.4596 2 15.6893 2.34673 15.1235C2.54074 14.8069 2.80693 14.5407 3.12353 14.3467C3.68934 14 4.45956 14 6 14C7.54044 14 8.31066 14 8.87647 14.3467C9.19307 14.5407 9.45926 14.8069 9.65327 15.1235C10 15.6893 10 16.4596 10 18C10 19.5404 10 20.3107 9.65327 20.8765C9.45926 21.1931 9.19307 21.4593 8.87647 21.6533C8.31066 22 7.54044 22 6 22C4.45956 22 3.68934 22 3.12353 21.6533C2.80693 21.4593 2.54074 21.1931 2.34673 20.8765C2 20.3107 2 19.5404 2 18Z" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M14 18C14 16.4596 14 15.6893 14.3467 15.1235C14.5407 14.8069 14.8069 14.5407 15.1235 14.3467C15.6893 14 16.4596 14 18 14C19.5404 14 20.3107 14 20.8765 14.3467C21.1931 14.5407 21.4593 14.8069 21.6533 15.1235C22 15.6893 22 16.4596 22 18C22 19.5404 22 20.3107 21.6533 20.8765C21.4593 21.1931 21.1931 21.4593 20.8765 21.6533C20.3107 22 19.5404 22 18 22C16.4596 22 15.6893 22 15.1235 21.6533C14.8069 21.4593 14.5407 21.1931 14.3467 20.8765C14 20.3107 14 19.5404 14 18Z" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M2 6C2 4.45956 2 3.68934 2.34673 3.12353C2.54074 2.80693 2.80693 2.54074 3.12353 2.34673C3.68934 2 4.45956 2 6 2C7.54044 2 8.31066 2 8.87647 2.34673C9.19307 2.54074 9.45926 2.80693 9.65327 3.12353C10 3.68934 10 4.45956 10 6C10 7.54044 10 8.31066 9.65327 8.87647C9.45926 9.19307 9.19307 9.45926 8.87647 9.65327C8.31066 10 7.54044 10 6 10C4.45956 10 3.68934 10 3.12353 9.65327C2.80693 9.45926 2.54074 9.19307 2.34673 8.87647C2 8.31066 2 7.54044 2 6Z" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M14 6C14 4.45956 14 3.68934 14.3467 3.12353C14.5407 2.80693 14.8069 2.54074 15.1235 2.34673C15.6893 2 16.4596 2 18 2C19.5404 2 20.3107 2 20.8765 2.34673C21.1931 2.54074 21.4593 2.80693 21.6533 3.12353C22 3.68934 22 4.45956 22 6C22 7.54044 22 8.31066 21.6533 8.87647C21.4593 9.19307 21.1931 9.45926 20.8765 9.65327C20.3107 10 19.5404 10 18 10C16.4596 10 15.6893 10 15.1235 9.65327C14.8069 9.45926 14.5407 9.19307 14.3467 8.87647C14 8.31066 14 7.54044 14 6Z" stroke="currentColor" stroke-width="1.8"/>
+                </g>
+              </svg>
+            </span>
+                        <span class="cabinet-menu__nav-text">Мои объявления</span>
+                      </a>
+
+                      <a href="" class="cabinet-menu__nav-link">
+            <span class="cabinet-menu__nav-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                <path d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M13.85 10.1278C13.85 10.6248 14.2529 11.0278 14.75 11.0278C15.2471 11.0278 15.65 10.6248 15.65 10.1278H13.85ZM9.9 13.8726C9.9 13.3756 9.49706 12.9726 9 12.9726C8.50294 12.9726 8.1 13.3756 8.1 13.8726H9.9ZM12.9 7C12.9 6.50294 12.4971 6.1 12 6.1C11.5029 6.1 11.1 6.50294 11.1 7L12.9 7ZM11.1 17C11.1 17.4971 11.5029 17.9 12 17.9C12.4971 17.9 12.9 17.4971 12.9 17H11.1ZM12 10.9562C11.0574 10.9562 10.5892 10.8047 10.3757 10.6617C10.2393 10.5704 10.15 10.4522 10.15 10.1278H8.35C8.35 10.9171 8.63574 11.663 9.37432 12.1575C10.0358 12.6003 10.9426 12.7562 12 12.7562V10.9562ZM10.15 10.1278C10.15 9.9266 10.2593 9.66846 10.5876 9.42773C10.9154 9.18738 11.4118 9.01133 12 9.01133V7.21133C11.0694 7.21133 10.1908 7.48667 9.52326 7.97615C8.85627 8.46522 8.35 9.21532 8.35 10.1278H10.15ZM12 9.01133C12.5882 9.01133 13.0846 9.18738 13.4124 9.42773C13.7407 9.66846 13.85 9.9266 13.85 10.1278H15.65C15.65 9.21532 15.1437 8.46522 14.4767 7.97615C13.8092 7.48667 12.9306 7.21133 12 7.21133V9.01133ZM14.1 13.8726C14.1 14.2515 13.9525 14.4736 13.66 14.6482C13.3129 14.8554 12.7473 14.9891 12 14.9891V16.7891C12.9095 16.7891 13.8439 16.6347 14.5826 16.1938C15.3759 15.7202 15.9 14.9341 15.9 13.8726H14.1ZM12 14.9891C11.326 14.9891 10.7561 14.8039 10.3807 14.5516C9.99972 14.2954 9.9 14.0384 9.9 13.8726H8.1C8.1 14.8206 8.67185 15.5717 9.37662 16.0454C10.087 16.5229 11.0172 16.7891 12 16.7891V14.9891ZM12 12.7562C12.9498 12.7562 13.4835 12.9 13.7605 13.0795C13.9556 13.206 14.1 13.3943 14.1 13.8726H15.9C15.9 12.9107 15.5444 12.0907 14.7395 11.5691C14.0165 11.1004 13.0502 10.9562 12 10.9562V12.7562ZM12.9 8.11133L12.9 7L11.1 7L11.1 8.11133L12.9 8.11133ZM11.1 15.8891V17H12.9V15.8891H11.1Z" fill="currentColor"/>
+                </g>
+              </svg>
+            </span>
+                        <span class="cabinet-menu__nav-text">Мои аукционы</span>
+                      </a>
+
+                      <a href="" class="cabinet-menu__nav-link">
+              <span class="cabinet-menu__nav-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_195_8654)">
+                <path d="M12.001 4.52898C14.35 2.41998 17.98 2.48998 20.243 4.75698C22.505 7.02498 22.583 10.637 20.479 12.993L11.999 21.485L3.52101 12.993C1.41701 10.637 1.49601 7.01898 3.75701 4.75698C6.02201 2.49298 9.64501 2.41698 12.001 4.52898ZM18.827 6.16998C17.327 4.66798 14.907 4.60698 13.337 6.01698L12.002 7.21498L10.666 6.01798C9.09101 4.60598 6.67601 4.66798 5.17201 6.17198C3.68201 7.66198 3.60701 10.047 4.98001 11.623L12 18.654L19.02 11.624C20.394 10.047 20.319 7.66498 18.827 6.16998Z" />
+                </g>
+                <defs>
+                <clipPath id="clip0_195_8654">
+                <rect width="24" height="24" fill="white"/>
+                </clipPath>
+                </defs>
+                </svg>
+              </span>
+                        <span class="cabinet-menu__nav-text">Избранное</span>
+                      </a>
+
+                      <a href="" class="cabinet-menu__nav-link cabinet-menu__nav-link--red">
+            <span class="cabinet-menu__nav-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+              <g clip-path="url(#clip0_195_8740)">
+              <path d="M4 18H6V20H18V4H6V6H4V3C4 2.73478 4.10536 2.48043 4.29289 2.29289C4.48043 2.10536 4.73478 2 5 2H19C19.2652 2 19.5196 2.10536 19.7071 2.29289C19.8946 2.48043 20 2.73478 20 3V21C20 21.2652 19.8946 21.5196 19.7071 21.7071C19.5196 21.8946 19.2652 22 19 22H5C4.73478 22 4.48043 21.8946 4.29289 21.7071C4.10536 21.5196 4 21.2652 4 21V18ZM6 11H13V13H6V16L1 12L6 8V11Z"/>
+              </g>
+              <defs>
+              <clipPath id="clip0_195_8740">
+              <rect width="24" height="24" fill="white"/>
+              </clipPath>
+              </defs>
+              </svg>
+            </span>
+                        <span class="cabinet-menu__nav-text">Выход</span>
+                      </a>
+                    </div>
+                  </nav>
+                  <div class="cabinet-menu__body-space"></div>
+                  <nav class="cabinet-menu__nav">
+                    <h4 class="cabinet-menu__nav-title">Мои организации</h4>
+                    <div>
+                      <a href="" class="new-organization btn-link">
+              <span class="btn-link__icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_195_5527)">
+                <path d="M11 11V5H13V11H19V13H13V19H11V13H5V11H11Z" fill="currentColor"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_195_5527">
+                <rect width="24" height="24" fill="white"/>
+                </clipPath>
+                </defs>
+                </svg>
+              </span>
+                        <span class="btn-link__text">Добавить новую организацию</span>
+                      </a>
+                    </div>
+                  </nav>
+                </div>
+              </aside>
+            </div>
+          </div>
+          <button style="z-index: 100;" data-da=".header__logo, 768" type="button" class="menu__icon icon-menu icon-menu-mob"><span></span></button>
+
+        </div>
+
+      </div>
+      <div class="header__menu menu">
+        <nav class="menu__body">
+          <ul class="menu__list">
+            <li class="menu__item"><a href="" class="menu__link">% Акции</a></li>
+            <li class="menu__item"><a href="" class="menu__link">Аукцион</a></li>
+            <li class="menu__item"><a href="" class="menu__link">Новинки</a></li>
+            <li class="menu__item"><a href="" class="menu__link">Деревообработка</a></li>
+            <li class="menu__item"><a href="" class="menu__link">Металлообработка</a></li>
+            <li class="menu__item"><a href="" class="menu__link">Кузнечно-прессовое</a></li>
+            <li class="menu__item"><a href="" class="menu__link">Пищевое</a></li>
+            <li class="menu__item"><a href="" class="menu__link">Силовая техника</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- это католог , что бы добавить под меню нужно свзять для button data-parent="4" а под меню data-submenu="4"(и не забывает в кнопке должна быть arrow) -->
+      <nav class="header__catalog-body catalog-header">
+        <h2 class="catalog-header__title">
+          <button class="menu-catalog__back-main" style="position: relative; top: 7px"><picture><source srcset="img/header/angle-small-down.webp" type="image/webp"><img src="img/header/angle-small-down.png" alt="#"></picture></button>
+          Каталог
+          <button class="menu-catalog__back-main close-force" style="position: relative; top: 7px"><picture><source srcset="img/header/cross-small.webp" type="image/webp"><img src="img/header/cross-small.png" alt="#" style="filter: brightness(0.6)"></picture></button>
+        </h2>
+        <div class="catalog-header__search">
+          <form class="header__search">
+            <input autocomplete="off" type="text" name="search" placeholder="Поиск в каталоге" class="header__search-input input">
+            <button class="header__search-button" type="submit">
+              <picture><source srcset="img/header/search.webp" type="image/webp"><img src="img/header/search.png" alt="Поиск"></picture>
+            </button>
+          </form>
+        </div>
+        <ul class="catalog-header__menu">
+          <li class="catalog-header__item">
+            <picture><source srcset="img/catalog/01.webp" type="image/webp"><img class="catalog-header__item-icon" src="img/catalog/01.png" alt="#"></picture>
+            <button data-parent="1">
+              Дерево­обрабатывающее
+              оборудование
+              <picture><source srcset="img/catalog/arrow.webp" type="image/webp"><img class="catalog-header__item-arrow" src="img/catalog/arrow.png" alt="#"></picture>
+
+            </button>
+
+          </li>
+          <li class="catalog-header__item">
+
+            <picture><source srcset="img/catalog/02.webp" type="image/webp"><img class="catalog-header__item-icon" src="img/catalog/02.png" alt="#"></picture>
+
+            <button data-parent="2">
+              Металло­обрабатывающее
+              оборудование
+              <picture><source srcset="img/catalog/arrow.webp" type="image/webp"><img class="catalog-header__item-arrow" src="img/catalog/arrow.png" alt="#"></picture>
+
+            </button>
+
+
+          </li>
+          <li class="catalog-header__item">
+            <picture><source srcset="img/catalog/03.webp" type="image/webp"><img class="catalog-header__item-icon" src="img/catalog/03.png" alt="#"></picture>
+            <button data-parent="3">
+              Кузнечно-прессовое
+              оборудование
+              <picture><source srcset="img/catalog/arrow.webp" type="image/webp"><img class="catalog-header__item-arrow" src="img/catalog/arrow.png" alt="#"></picture>
+
+            </button>
+
+          </li>
+          <li class="catalog-header__item">
+            <picture><source srcset="img/catalog/04.webp" type="image/webp"><img class="catalog-header__item-icon" src="img/catalog/04.png" alt="#"></picture>
+            <button>
+              Пищевое оборудование
+
+            </button>
+
+          </li>
+          <li class="catalog-header__item">
+            <picture><source srcset="img/catalog/05.webp" type="image/webp"><img class="catalog-header__item-icon" src="img/catalog/05.png" alt="#"></picture>
+            <button>
+              Силовая техника
+
+            </button>
+
+          </li>
+          <li class="catalog-header__item">
+            <picture><source srcset="img/catalog/06.webp" type="image/webp"><img class="catalog-header__item-icon" src="img/catalog/06.png" alt="#"></picture>
+            <button>
+              Упаковочное оборудование
+
+            </button>
+
+          </li>
+          <li class="catalog-header__item">
+            <picture><source srcset="img/catalog/07.webp" type="image/webp"><img class="catalog-header__item-icon" src="img/catalog/07.png" alt="#"></picture>
+            <button>
+              Оборудование для СТО
+
+            </button>
+
+          </li>
+          <li class="catalog-header__item">
+            <picture><source srcset="img/catalog/08.webp" type="image/webp"><img class="catalog-header__item-icon" src="img/catalog/08.png" alt="#"></picture>
+            <button>
+              Полиграфическое
+              оборудование
+
+            </button>
+
+          </li>
+          <li class="catalog-header__item">
+            <picture><source srcset="img/catalog/09.webp" type="image/webp"><img class="catalog-header__item-icon" src="img/catalog/09.png" alt="#"></picture>
+            <button>
+              Оборудование легкой
+              промышленности
+
+            </button>
+
+          </li>
+          <li class="catalog-header__item">
+            <picture><source srcset="img/catalog/10.webp" type="image/webp"><img class="catalog-header__item-icon" src="img/catalog/10.png" alt="#"></picture>
+            <button>
+              Оборудование для
+              производства окон
+
+            </button>
+
+          </li>
+          <li class="catalog-header__item">
+            <picture><source srcset="img/catalog/11.webp" type="image/webp"><img class="catalog-header__item-icon" src="img/catalog/11.png" alt="#"></picture>
+            <button>
+              Сварочное оборудование
+
+            </button>
+
+          </li>
+          <li class="catalog-header__item">
+            <picture><source srcset="img/catalog/12.webp" type="image/webp"><img class="catalog-header__item-icon" src="img/catalog/12.png" alt="#"></picture>
+            <button>
+              Стекло­обрабатывающее
+              оборудование
+
+            </button>
+
+          </li>
+          <li class="catalog-header__item">
+            <picture><source srcset="img/catalog/13.webp" type="image/webp"><img class="catalog-header__item-icon" src="img/catalog/13.png" alt="#"></picture>
+            <button>
+              Оборудование для
+              производства тротуарной
+              плитки
+
+            </button>
+
+          </li>
+          <li class="catalog-header__item">
+            <picture><source srcset="img/catalog/14.webp" type="image/webp"><img class="catalog-header__item-icon" src="img/catalog/14.png" alt="#"></picture>
+            <button>
+              Окрасочное оборудование
+
+            </button>
+
+          </li>
+          <li class="catalog-header__item catalog-header__item-hide">
+            <picture><source srcset="img/catalog/15.webp" type="image/webp"><img class="catalog-header__item-icon" src="img/catalog/15.png" alt="#"></picture>
+            <button>
+              Акции
+
+            </button>
+
+          </li>
+
+
+        </ul>
+        <div class="catalog-header__sub-menu">
+          <div hidden data-submenu="1" class="catalog-header__sub-list-body sub-menu-catalog__block">
+            <h3>Инструменты</h3>
+            <ul class="catalog-header__sub-list">
+              <li><a href="#">Аккумуляторныйинструментинструментинструментинструмент инструмент</a></li>
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+              <li><a href="#">USB адаптеры (523)</a></li>
+
+              <li><a href="#">Аккумуляторные (523)</a></li>
+
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+
+
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+
+            </ul>
+          </div>
+          <div hidden data-submenu="2" class="catalog-header__sub-list-body sub-menu-catalog__block">
+            <h3>Инструменты 2</h3>
+            <ul class="catalog-header__sub-list">
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+              <li><a href="#">Аккумуляторный инструмент</a></li>
+
+
+
+            </ul>
+          </div>
+          <div hidden data-submenu="3" class="catalog-header__sub-list-body sub-menu-catalog__block">
+            <h3>Инструменты 3</h3>
+            <ul class="catalog-header__sub-list">
+              <li><a href="#"> инструмент</a></li>
+              <li><a href="#"> инструмент</a></li>
+
+              <li><a href="#"> инструмент</a></li>
+
+              <li><a href="#"> инструмент</a></li>
+
+              <li><a href="#"> инструмент</a></li>
+
+              <li><a href="#"> инструмент</a></li>
+
+              <li><a href="#"> инструмент</a></li>
+
+              <li><a href="#"> инструмент</a></li>
+
+
+              <li><a href="#"> инструмент</a></li>
+
+              <li><a href="#"> инструмент</a></li>
+
+
+              <li><a href="#"> инструмент</a></li>
+
+              <li><a href="#"> инструмент</a></li>
+
+              <li><a href="#"> инструмент</a></li>
+
+
+              <li><a href="#"> инструмент</a></li>
+
+              <li><a href="#"> инструмент</a></li>
+
+
+
+
+
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="menu-phone">
+        <div class="menu-phone__item">
+          <a href="#" class="menu-phone__button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path fill-rule="evenodd" d="M13.1 4.3a2 2 0 0 0-2.2 0l-6 4A2 2 0 0 0 4 10v9c0 .6.4 1 1 1h3.5v-4c0-1.1.9-2 2-2h3a2 2 0 0 1 2 2v4H19c.6 0 1-.4 1-1v-9a2 2 0 0 0-.9-1.7l-6-4ZM9.8 2.7a4 4 0 0 1 4.4 0l6 4A4 4 0 0 1 22 10v9a3 3 0 0 1-3 3h-3.5a2 2 0 0 1-2-2v-4h-3v4a2 2 0 0 1-2 2H5a3 3 0 0 1-3-3v-9a4 4 0 0 1 1.8-3.3l6-4Z" clip-rule="evenodd"></path>
+            </svg>
+            <p>Главная</p>
+          </a>
+        </div>
+        <div class="menu-phone__item">
+          <a href="#" class="menu-phone__button button-menu-phone ">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="">
+              <path fill-rule="evenodd" d="M24 12a8 8 0 0 1-2.8 6l1.6 2.5a1 1 0 0 1-1.6 1l-1.6-2.3A8 8 0 1 1 24 12Zm-2 0a6 6 0 1 1-12 0 6 6 0 0 1 12 0ZM1 6a1 1 0 0 0 0 2h5a1 1 0 0 0 0-2H1Zm0 5a1 1 0 1 0 0 2h3a1 1 0 1 0 0-2H1Zm-1 6c0-.6.4-1 1-1h5a1 1 0 1 1 0 2H1a1 1 0 0 1-1-1Z" clip-rule="evenodd"></path>
+            </svg>
+            <p>Каталог</p>
+          </a>
+        </div>
+        <div class="menu-phone__item">
+          <a href="#" class="menu-phone__button">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 24 24">
+              <path d="M17,4v14.967l-4.212-1.805L12,16.824l-0.788,0.338L7,18.967V4H17 M17,2H7C5.9,2,5,2.9,5,4v18l7-3l7,3V4C19,2.9,18.1,2,17,2 L17,2z">
+              </path>
+            </svg>
+            <p>Избранное</p>
+          </a>
+        </div>
+        <div class="menu-phone__item">
+          <a href="tel:+71234567890" class="menu-phone__button">
+            <img src="img/header/phone.svg" alt="#">
+            <p>Телефоны</p>
+          </a>
+        </div>
+        <div class="menu-phone__item">
+          <a href="#" class="menu-phone__button cabinet-menu__right-toggle">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path fill-rule="evenodd" d="M9.5 7.5a2.5 2.5 0 1 1 5 0 2.5 2.5 0 0 1-5 0ZM12 3a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9ZM4.9 20.4a7.9 7.9 0 0 1 14.2 0 1 1 0 1 0 1.8-.8 9.9 9.9 0 0 0-17.8 0 1 1 0 1 0 1.8.8Z" clip-rule="evenodd"></path>
+            </svg>
+            <p>Профиль</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div id="popup-two" aria-hidden="true" class="popup">
+    <div class="popup__wrapper">
+      <div class="popup__content">
+        <button data-close type="button" class="popup__close"><picture><source srcset="img/popup/01.webp" type="image/webp"><img src="img/popup/01.png" alt="#"></picture></button>
+        <div class="popup__card">
+          <span class="popup__title">Форма отправки</span>
+          <form class="popup__form">
+            <div class="popup__group">
+              <input placeholder="" type="text" required="">
+              <label for="name">имя</label>
+            </div>
+            <div class="popup__group">
+              <input placeholder="" type="email" id="email" name="email" required="">
+              <label for="email">Email</label>
+            </div>
+            <div class="popup__group">
+              <textarea placeholder="" id="comment" name="comment" rows="5" required=""></textarea>
+              <label for="comment">Комментарии</label>
+            </div>
+            <button type="submit">Отправить</button>
+          </form>
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+  <div id="popup" aria-hidden="true" class="popup">
+    <div class="popup__wrapper">
+      <div class="popup__content">
+        <button data-close type="button" class="popup__close"><picture><source srcset="img/popup/01.webp" type="image/webp"><img src="img/popup/01.png" alt="#"></picture></button>
+        <div class="popup__body">
+          <div data-tabs class="popup-login">
+            <nav data-tabs-titles class="popup-login__navigation">
+              <button type="button" class="popup-login__title _tab-active">Войти</button>
+              <button type="button" class="popup-login__title">Регистрация</button>
+            </nav>
+            <div data-tabs-body class="popup-login__content">
+              <div class="popup-login__body">
+                <form>
+                  <div class="popup-login-item">
+                    <label class="popup-login-label">Email / телефон</label>
+                    <input autocomplete="off" placeholder="Email" type="text" name="mail" class="popup-login__input input">
+                  </div>
+                  <div class="popup-login-item">
+                    <label class="popup-login-label">Пароль</label>
+                    <input autocomplete="off" value="123456" type="password" name="password" class="popup-login__input input">
+                    <button class="form__viewpass" type="button">Показать пароль</button>
+                  </div>
+                  <button class="popup-login__button" type="submit">Войти</button>
+                  <a class="popup-login-link" href="#">Забыли пароль?</a>
+                </form>
+              </div>
+              <div class="popup-login__body">
+                <form>
+                  <div class="popup-login-item">
+                    <label class="popup-login-label">Email / телефон</label>
+                    <input autocomplete="off" placeholder="Email" type="text" name="mail" class="popup-login__input input">
+                  </div>
+
+                  <button class="popup-login__button" type="submit">Зарегистрироваться</button>
+                  <p class="popup-login-politicy">Нажимая кнопку «Зарегистрироваться», я соглашаюсь на
+                    получение информации от интернет-магазина, а также
+                    принимаю условия <a href="#">политики конфеденциальности.</a></p>
+                </form>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cabinet-page">
+    <div class="cabinet-page__container">
+      <div class="cabinet-page__mobile-menu">
+        <button type="button" class="cabinet-menu__left-toggle menu-btn">
+          <span class="menu-btn__text">Мой кабинет</span>
+          <span class="menu-btn__icon">
+          <svg viewBox="0 0 19 19" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_195_11728)">
+          <path d="M6.33333 3.16666H16.625V4.74999H6.33333V3.16666ZM3.5625 5.14583C3.24756 5.14583 2.94551 5.02072 2.72281 4.79802C2.50011 4.57532 2.375 4.27327 2.375 3.95833C2.375 3.64338 2.50011 3.34134 2.72281 3.11864C2.94551 2.89594 3.24756 2.77083 3.5625 2.77083C3.87744 2.77083 4.17949 2.89594 4.40219 3.11864C4.62489 3.34134 4.75 3.64338 4.75 3.95833C4.75 4.27327 4.62489 4.57532 4.40219 4.79802C4.17949 5.02072 3.87744 5.14583 3.5625 5.14583ZM3.5625 10.6875C3.24756 10.6875 2.94551 10.5624 2.72281 10.3397C2.50011 10.117 2.375 9.81494 2.375 9.5C2.375 9.18505 2.50011 8.88301 2.72281 8.66031C2.94551 8.43761 3.24756 8.3125 3.5625 8.3125C3.87744 8.3125 4.17949 8.43761 4.40219 8.66031C4.62489 8.88301 4.75 9.18505 4.75 9.5C4.75 9.81494 4.62489 10.117 4.40219 10.3397C4.17949 10.5624 3.87744 10.6875 3.5625 10.6875ZM3.5625 16.15C3.24756 16.15 2.94551 16.0249 2.72281 15.8022C2.50011 15.5795 2.375 15.2774 2.375 14.9625C2.375 14.6476 2.50011 14.3455 2.72281 14.1228C2.94551 13.9001 3.24756 13.775 3.5625 13.775C3.87744 13.775 4.17949 13.9001 4.40219 14.1228C4.62489 14.3455 4.75 14.6476 4.75 14.9625C4.75 15.2774 4.62489 15.5795 4.40219 15.8022C4.17949 16.0249 3.87744 16.15 3.5625 16.15ZM6.33333 8.70833H16.625V10.2917H6.33333V8.70833ZM6.33333 14.25H16.625V15.8333H6.33333V14.25Z" fill="currentColor"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_195_11728">
+          <rect width="19" height="19" fill="white"/>
+          </clipPath>
+          </defs>
+          </svg>
+        </span>
+        </button>
+      </div>
+      <aside class="cabinet-page__left-menu cabinet-menu">
+        <div class="cabinet-menu__head">
+          <h3 class="cabinet-menu__title">Мой кабинет</h3>
+          <button class="cabinet-menu__close cabinet-menu__left-toggle menu-btn" type="button">
+          <span class="menu-btn__icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="transform:rotate(45deg);">
+                <g clip-path="url(#clip0_195_5527)">
+                <path d="M11 11V5H13V11H19V13H13V19H11V13H5V11H11Z" fill="currentColor"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_195_5527">
+                <rect width="24" height="24" fill="white"/>
+                </clipPath>
+                </defs>
+                </svg>
+          </span>
+          </button>
+        </div>
+        <div class="cabinet-menu__body custom-scroll custom-scroll-on-hover">
+          <div class="cabinet-menu__nav cabinet-menu__nav--profile">
+            <h4 class="cabinet-menu__nav-title">Ваш профиль</h4>
+            <div class="cabinet-menu__nav-list">
+              <a href="#" class="cabinet-menu__nav-link cabinet-menu__right-toggle">
+                <span class="cabinet-menu__nav-icon">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_195_8670)">
+                    <path d="M4 22C4 19.8783 4.84285 17.8434 6.34315 16.3431C7.84344 14.8429 9.87827 14 12 14C14.1217 14 16.1566 14.8429 17.6569 16.3431C19.1571 17.8434 20 19.8783 20 22H18C18 20.4087 17.3679 18.8826 16.2426 17.7574C15.1174 16.6321 13.5913 16 12 16C10.4087 16 8.88258 16.6321 7.75736 17.7574C6.63214 18.8826 6 20.4087 6 22H4ZM12 13C8.685 13 6 10.315 6 7C6 3.685 8.685 1 12 1C15.315 1 18 3.685 18 7C18 10.315 15.315 13 12 13ZM12 11C14.21 11 16 9.21 16 7C16 4.79 14.21 3 12 3C9.79 3 8 4.79 8 7C8 9.21 9.79 11 12 11Z"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_195_8670">
+                    <rect width="24" height="24" fill="white"/>
+                    </clipPath>
+                    </defs>
+                  </svg>
+                </span>
+                <span class="cabinet-menu__nav-text">
+                  <b>Иван</b>
+                  <div>Баланс: <b class="">10&nbsp;000&nbsp;р.</b></div>
+                </span>
+              </a>
+            </div>
+          </div>
+          <nav class="cabinet-menu__nav">
+            <h4 class="cabinet-menu__nav-title">Продажи</h4>
+            <div class="cabinet-menu__nav-list">
+              <a href="" class="cabinet-menu__nav-link">
+            <span class="cabinet-menu__nav-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                <path d="M2 18C2 16.4596 2 15.6893 2.34673 15.1235C2.54074 14.8069 2.80693 14.5407 3.12353 14.3467C3.68934 14 4.45956 14 6 14C7.54044 14 8.31066 14 8.87647 14.3467C9.19307 14.5407 9.45926 14.8069 9.65327 15.1235C10 15.6893 10 16.4596 10 18C10 19.5404 10 20.3107 9.65327 20.8765C9.45926 21.1931 9.19307 21.4593 8.87647 21.6533C8.31066 22 7.54044 22 6 22C4.45956 22 3.68934 22 3.12353 21.6533C2.80693 21.4593 2.54074 21.1931 2.34673 20.8765C2 20.3107 2 19.5404 2 18Z" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M14 18C14 16.4596 14 15.6893 14.3467 15.1235C14.5407 14.8069 14.8069 14.5407 15.1235 14.3467C15.6893 14 16.4596 14 18 14C19.5404 14 20.3107 14 20.8765 14.3467C21.1931 14.5407 21.4593 14.8069 21.6533 15.1235C22 15.6893 22 16.4596 22 18C22 19.5404 22 20.3107 21.6533 20.8765C21.4593 21.1931 21.1931 21.4593 20.8765 21.6533C20.3107 22 19.5404 22 18 22C16.4596 22 15.6893 22 15.1235 21.6533C14.8069 21.4593 14.5407 21.1931 14.3467 20.8765C14 20.3107 14 19.5404 14 18Z" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M2 6C2 4.45956 2 3.68934 2.34673 3.12353C2.54074 2.80693 2.80693 2.54074 3.12353 2.34673C3.68934 2 4.45956 2 6 2C7.54044 2 8.31066 2 8.87647 2.34673C9.19307 2.54074 9.45926 2.80693 9.65327 3.12353C10 3.68934 10 4.45956 10 6C10 7.54044 10 8.31066 9.65327 8.87647C9.45926 9.19307 9.19307 9.45926 8.87647 9.65327C8.31066 10 7.54044 10 6 10C4.45956 10 3.68934 10 3.12353 9.65327C2.80693 9.45926 2.54074 9.19307 2.34673 8.87647C2 8.31066 2 7.54044 2 6Z" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M14 6C14 4.45956 14 3.68934 14.3467 3.12353C14.5407 2.80693 14.8069 2.54074 15.1235 2.34673C15.6893 2 16.4596 2 18 2C19.5404 2 20.3107 2 20.8765 2.34673C21.1931 2.54074 21.4593 2.80693 21.6533 3.12353C22 3.68934 22 4.45956 22 6C22 7.54044 22 8.31066 21.6533 8.87647C21.4593 9.19307 21.1931 9.45926 20.8765 9.65327C20.3107 10 19.5404 10 18 10C16.4596 10 15.6893 10 15.1235 9.65327C14.8069 9.45926 14.5407 9.19307 14.3467 8.87647C14 8.31066 14 7.54044 14 6Z" stroke="currentColor" stroke-width="1.8"/>
+                </g>
+              </svg>
+            </span>
+                <span class="cabinet-menu__nav-text">Мои объявления</span>
+              </a>
+
+              <a href="" class="cabinet-menu__nav-link">
+            <span class="cabinet-menu__nav-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                <path d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M13.85 10.1278C13.85 10.6248 14.2529 11.0278 14.75 11.0278C15.2471 11.0278 15.65 10.6248 15.65 10.1278H13.85ZM9.9 13.8726C9.9 13.3756 9.49706 12.9726 9 12.9726C8.50294 12.9726 8.1 13.3756 8.1 13.8726H9.9ZM12.9 7C12.9 6.50294 12.4971 6.1 12 6.1C11.5029 6.1 11.1 6.50294 11.1 7L12.9 7ZM11.1 17C11.1 17.4971 11.5029 17.9 12 17.9C12.4971 17.9 12.9 17.4971 12.9 17H11.1ZM12 10.9562C11.0574 10.9562 10.5892 10.8047 10.3757 10.6617C10.2393 10.5704 10.15 10.4522 10.15 10.1278H8.35C8.35 10.9171 8.63574 11.663 9.37432 12.1575C10.0358 12.6003 10.9426 12.7562 12 12.7562V10.9562ZM10.15 10.1278C10.15 9.9266 10.2593 9.66846 10.5876 9.42773C10.9154 9.18738 11.4118 9.01133 12 9.01133V7.21133C11.0694 7.21133 10.1908 7.48667 9.52326 7.97615C8.85627 8.46522 8.35 9.21532 8.35 10.1278H10.15ZM12 9.01133C12.5882 9.01133 13.0846 9.18738 13.4124 9.42773C13.7407 9.66846 13.85 9.9266 13.85 10.1278H15.65C15.65 9.21532 15.1437 8.46522 14.4767 7.97615C13.8092 7.48667 12.9306 7.21133 12 7.21133V9.01133ZM14.1 13.8726C14.1 14.2515 13.9525 14.4736 13.66 14.6482C13.3129 14.8554 12.7473 14.9891 12 14.9891V16.7891C12.9095 16.7891 13.8439 16.6347 14.5826 16.1938C15.3759 15.7202 15.9 14.9341 15.9 13.8726H14.1ZM12 14.9891C11.326 14.9891 10.7561 14.8039 10.3807 14.5516C9.99972 14.2954 9.9 14.0384 9.9 13.8726H8.1C8.1 14.8206 8.67185 15.5717 9.37662 16.0454C10.087 16.5229 11.0172 16.7891 12 16.7891V14.9891ZM12 12.7562C12.9498 12.7562 13.4835 12.9 13.7605 13.0795C13.9556 13.206 14.1 13.3943 14.1 13.8726H15.9C15.9 12.9107 15.5444 12.0907 14.7395 11.5691C14.0165 11.1004 13.0502 10.9562 12 10.9562V12.7562ZM12.9 8.11133L12.9 7L11.1 7L11.1 8.11133L12.9 8.11133ZM11.1 15.8891V17H12.9V15.8891H11.1Z" fill="currentColor"/>
+                </g>
+              </svg>
+            </span>
+                <span class="cabinet-menu__nav-text">Мои аукционы</span>
+              </a>
+
+              <a href="" class="cabinet-menu__nav-link">
+            <span class="cabinet-menu__nav-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                <path d="M8 16H15.2632C19.7508 16 20.4333 13.1808 21.261 9.06908C21.4998 7.88311 21.6192 7.29013 21.3321 6.89507C21.045 6.5 20.4947 6.5 19.3941 6.5H6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M8 16L5.37873 3.51493C5.15615 2.62459 4.35618 2 3.43845 2H2.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M8.88 16H8.46857C7.10522 16 6 17.1513 6 18.5714C6 18.8081 6.1842 19 6.41143 19H17.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="10.5" cy="20.5" r="1.5" stroke="currentColor" stroke-width="1.8"/>
+                <circle cx="17.5" cy="20.5" r="1.5" stroke="currentColor" stroke-width="1.8"/>
+                </g>
+              </svg>
+            </span>
+                <span class="cabinet-menu__nav-text">Мои продажи</span>
+              </a>
+            </div>
+          </nav>
+
+          <nav class="cabinet-menu__nav">
+            <h4 class="cabinet-menu__nav-title">Покупки</h4>
+            <div class="cabinet-menu__nav-list">
+              <a href="" class="cabinet-menu__nav-link">
+              <span class="cabinet-menu__nav-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g>
+                  <path d="M8 16H15.2632C19.7508 16 20.4333 13.1808 21.261 9.06908C21.4998 7.88311 21.6192 7.29013 21.3321 6.89507C21.045 6.5 20.4947 6.5 19.3941 6.5H6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                  <path d="M8 16L5.37873 3.51493C5.15615 2.62459 4.35618 2 3.43845 2H2.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                  <path d="M8.88 16H8.46857C7.10522 16 6 17.1513 6 18.5714C6 18.8081 6.1842 19 6.41143 19H17.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="10.5" cy="20.5" r="1.5" stroke="currentColor" stroke-width="1.8"/>
+                  <circle cx="17.5" cy="20.5" r="1.5" stroke="currentColor" stroke-width="1.8"/>
+                  </g>
+                </svg>
+              </span>
+                <span class="cabinet-menu__nav-text">Мои покупки</span>
+              </a>
+
+              <a href="" class="cabinet-menu__nav-link">
+              <span class="cabinet-menu__nav-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g>
+                  <path d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="currentColor" stroke-width="1.8"/>
+                  <path d="M13.85 10.1278C13.85 10.6248 14.2529 11.0278 14.75 11.0278C15.2471 11.0278 15.65 10.6248 15.65 10.1278H13.85ZM9.9 13.8726C9.9 13.3756 9.49706 12.9726 9 12.9726C8.50294 12.9726 8.1 13.3756 8.1 13.8726H9.9ZM12.9 7C12.9 6.50294 12.4971 6.1 12 6.1C11.5029 6.1 11.1 6.50294 11.1 7L12.9 7ZM11.1 17C11.1 17.4971 11.5029 17.9 12 17.9C12.4971 17.9 12.9 17.4971 12.9 17H11.1ZM12 10.9562C11.0574 10.9562 10.5892 10.8047 10.3757 10.6617C10.2393 10.5704 10.15 10.4522 10.15 10.1278H8.35C8.35 10.9171 8.63574 11.663 9.37432 12.1575C10.0358 12.6003 10.9426 12.7562 12 12.7562V10.9562ZM10.15 10.1278C10.15 9.9266 10.2593 9.66846 10.5876 9.42773C10.9154 9.18738 11.4118 9.01133 12 9.01133V7.21133C11.0694 7.21133 10.1908 7.48667 9.52326 7.97615C8.85627 8.46522 8.35 9.21532 8.35 10.1278H10.15ZM12 9.01133C12.5882 9.01133 13.0846 9.18738 13.4124 9.42773C13.7407 9.66846 13.85 9.9266 13.85 10.1278H15.65C15.65 9.21532 15.1437 8.46522 14.4767 7.97615C13.8092 7.48667 12.9306 7.21133 12 7.21133V9.01133ZM14.1 13.8726C14.1 14.2515 13.9525 14.4736 13.66 14.6482C13.3129 14.8554 12.7473 14.9891 12 14.9891V16.7891C12.9095 16.7891 13.8439 16.6347 14.5826 16.1938C15.3759 15.7202 15.9 14.9341 15.9 13.8726H14.1ZM12 14.9891C11.326 14.9891 10.7561 14.8039 10.3807 14.5516C9.99972 14.2954 9.9 14.0384 9.9 13.8726H8.1C8.1 14.8206 8.67185 15.5717 9.37662 16.0454C10.087 16.5229 11.0172 16.7891 12 16.7891V14.9891ZM12 12.7562C12.9498 12.7562 13.4835 12.9 13.7605 13.0795C13.9556 13.206 14.1 13.3943 14.1 13.8726H15.9C15.9 12.9107 15.5444 12.0907 14.7395 11.5691C14.0165 11.1004 13.0502 10.9562 12 10.9562V12.7562ZM12.9 8.11133L12.9 7L11.1 7L11.1 8.11133L12.9 8.11133ZM11.1 15.8891V17H12.9V15.8891H11.1Z" fill="currentColor"/>
+                  </g>
+                </svg>
+              </span>
+                <span class="cabinet-menu__nav-text">Мои ставки</span>
+              </a>
+            </div>
+          </nav>
+
+          <nav class="cabinet-menu__nav">
+            <h4 class="cabinet-menu__nav-title">Финансы</h4>
+            <div class="cabinet-menu__nav-list">
+              <a href="" class="cabinet-menu__nav-link">
+              <span class="cabinet-menu__nav-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g>
+                  <path d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="currentColor" stroke-width="1.8"/>
+                  <path d="M13.85 10.1278C13.85 10.6248 14.2529 11.0278 14.75 11.0278C15.2471 11.0278 15.65 10.6248 15.65 10.1278H13.85ZM9.9 13.8726C9.9 13.3756 9.49706 12.9726 9 12.9726C8.50294 12.9726 8.1 13.3756 8.1 13.8726H9.9ZM12.9 7C12.9 6.50294 12.4971 6.1 12 6.1C11.5029 6.1 11.1 6.50294 11.1 7L12.9 7ZM11.1 17C11.1 17.4971 11.5029 17.9 12 17.9C12.4971 17.9 12.9 17.4971 12.9 17H11.1ZM12 10.9562C11.0574 10.9562 10.5892 10.8047 10.3757 10.6617C10.2393 10.5704 10.15 10.4522 10.15 10.1278H8.35C8.35 10.9171 8.63574 11.663 9.37432 12.1575C10.0358 12.6003 10.9426 12.7562 12 12.7562V10.9562ZM10.15 10.1278C10.15 9.9266 10.2593 9.66846 10.5876 9.42773C10.9154 9.18738 11.4118 9.01133 12 9.01133V7.21133C11.0694 7.21133 10.1908 7.48667 9.52326 7.97615C8.85627 8.46522 8.35 9.21532 8.35 10.1278H10.15ZM12 9.01133C12.5882 9.01133 13.0846 9.18738 13.4124 9.42773C13.7407 9.66846 13.85 9.9266 13.85 10.1278H15.65C15.65 9.21532 15.1437 8.46522 14.4767 7.97615C13.8092 7.48667 12.9306 7.21133 12 7.21133V9.01133ZM14.1 13.8726C14.1 14.2515 13.9525 14.4736 13.66 14.6482C13.3129 14.8554 12.7473 14.9891 12 14.9891V16.7891C12.9095 16.7891 13.8439 16.6347 14.5826 16.1938C15.3759 15.7202 15.9 14.9341 15.9 13.8726H14.1ZM12 14.9891C11.326 14.9891 10.7561 14.8039 10.3807 14.5516C9.99972 14.2954 9.9 14.0384 9.9 13.8726H8.1C8.1 14.8206 8.67185 15.5717 9.37662 16.0454C10.087 16.5229 11.0172 16.7891 12 16.7891V14.9891ZM12 12.7562C12.9498 12.7562 13.4835 12.9 13.7605 13.0795C13.9556 13.206 14.1 13.3943 14.1 13.8726H15.9C15.9 12.9107 15.5444 12.0907 14.7395 11.5691C14.0165 11.1004 13.0502 10.9562 12 10.9562V12.7562ZM12.9 8.11133L12.9 7L11.1 7L11.1 8.11133L12.9 8.11133ZM11.1 15.8891V17H12.9V15.8891H11.1Z" fill="currentColor"/>
+                  </g>
+                </svg>
+              </span>
+                <span class="cabinet-menu__nav-text">Баланс</span>
+              </a>
+            </div>
+          </nav>
+
+          <nav class="cabinet-menu__nav">
+            <h4 class="cabinet-menu__nav-title">Товары</h4>
+            <div class="cabinet-menu__nav-list">
+              <a href="" class="cabinet-menu__nav-link">
+              <span class="cabinet-menu__nav-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_195_8654)">
+                <path d="M12.001 4.52898C14.35 2.41998 17.98 2.48998 20.243 4.75698C22.505 7.02498 22.583 10.637 20.479 12.993L11.999 21.485L3.52101 12.993C1.41701 10.637 1.49601 7.01898 3.75701 4.75698C6.02201 2.49298 9.64501 2.41698 12.001 4.52898ZM18.827 6.16998C17.327 4.66798 14.907 4.60698 13.337 6.01698L12.002 7.21498L10.666 6.01798C9.09101 4.60598 6.67601 4.66798 5.17201 6.17198C3.68201 7.66198 3.60701 10.047 4.98001 11.623L12 18.654L19.02 11.624C20.394 10.047 20.319 7.66498 18.827 6.16998Z" />
+                </g>
+                <defs>
+                <clipPath id="clip0_195_8654">
+                <rect width="24" height="24" fill="white"/>
+                </clipPath>
+                </defs>
+                </svg>
+              </span>
+                <span class="cabinet-menu__nav-text">Избранное</span>
+              </a>
+
+              <a href="" class="cabinet-menu__nav-link">
+              <span class="cabinet-menu__nav-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_195_8660)">
+                <path d="M9.99999 15.172L19.192 5.979L20.607 7.393L9.99999 18L3.63599 11.636L5.04999 10.222L9.99999 15.172Z"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_195_8660">
+                <rect width="24" height="24" fill="white"/>
+                </clipPath>
+                </defs>
+                </svg>
+              </span>
+                <span class="cabinet-menu__nav-text">Просмотренные товары</span>
+              </a>
+            </div>
+          </nav>
+
+          <nav class="cabinet-menu__nav">
+            <h4 class="cabinet-menu__nav-title">Профиль</h4>
+            <div class="cabinet-menu__nav-list">
+              <a href="" class="cabinet-menu__nav-link">
+              <span class="cabinet-menu__nav-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_195_8670)">
+                  <path d="M4 22C4 19.8783 4.84285 17.8434 6.34315 16.3431C7.84344 14.8429 9.87827 14 12 14C14.1217 14 16.1566 14.8429 17.6569 16.3431C19.1571 17.8434 20 19.8783 20 22H18C18 20.4087 17.3679 18.8826 16.2426 17.7574C15.1174 16.6321 13.5913 16 12 16C10.4087 16 8.88258 16.6321 7.75736 17.7574C6.63214 18.8826 6 20.4087 6 22H4ZM12 13C8.685 13 6 10.315 6 7C6 3.685 8.685 1 12 1C15.315 1 18 3.685 18 7C18 10.315 15.315 13 12 13ZM12 11C14.21 11 16 9.21 16 7C16 4.79 14.21 3 12 3C9.79 3 8 4.79 8 7C8 9.21 9.79 11 12 11Z"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_195_8670">
+                  <rect width="24" height="24" fill="white"/>
+                  </clipPath>
+                  </defs>
+                </svg>
+              </span>
+                <span class="cabinet-menu__nav-text">Личные данные</span>
+              </a>
+
+              <a href="" class="cabinet-menu__nav-link">
+              <span class="cabinet-menu__nav-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g>
+                  <path d="M2 18C2 16.4596 2 15.6893 2.34673 15.1235C2.54074 14.8069 2.80693 14.5407 3.12353 14.3467C3.68934 14 4.45956 14 6 14C7.54044 14 8.31066 14 8.87647 14.3467C9.19307 14.5407 9.45926 14.8069 9.65327 15.1235C10 15.6893 10 16.4596 10 18C10 19.5404 10 20.3107 9.65327 20.8765C9.45926 21.1931 9.19307 21.4593 8.87647 21.6533C8.31066 22 7.54044 22 6 22C4.45956 22 3.68934 22 3.12353 21.6533C2.80693 21.4593 2.54074 21.1931 2.34673 20.8765C2 20.3107 2 19.5404 2 18Z" stroke="currentColor" stroke-width="1.8"/>
+                  <path d="M14 18C14 16.4596 14 15.6893 14.3467 15.1235C14.5407 14.8069 14.8069 14.5407 15.1235 14.3467C15.6893 14 16.4596 14 18 14C19.5404 14 20.3107 14 20.8765 14.3467C21.1931 14.5407 21.4593 14.8069 21.6533 15.1235C22 15.6893 22 16.4596 22 18C22 19.5404 22 20.3107 21.6533 20.8765C21.4593 21.1931 21.1931 21.4593 20.8765 21.6533C20.3107 22 19.5404 22 18 22C16.4596 22 15.6893 22 15.1235 21.6533C14.8069 21.4593 14.5407 21.1931 14.3467 20.8765C14 20.3107 14 19.5404 14 18Z" stroke="currentColor" stroke-width="1.8"/>
+                  <path d="M2 6C2 4.45956 2 3.68934 2.34673 3.12353C2.54074 2.80693 2.80693 2.54074 3.12353 2.34673C3.68934 2 4.45956 2 6 2C7.54044 2 8.31066 2 8.87647 2.34673C9.19307 2.54074 9.45926 2.80693 9.65327 3.12353C10 3.68934 10 4.45956 10 6C10 7.54044 10 8.31066 9.65327 8.87647C9.45926 9.19307 9.19307 9.45926 8.87647 9.65327C8.31066 10 7.54044 10 6 10C4.45956 10 3.68934 10 3.12353 9.65327C2.80693 9.45926 2.54074 9.19307 2.34673 8.87647C2 8.31066 2 7.54044 2 6Z" stroke="currentColor" stroke-width="1.8"/>
+                  <path d="M14 6C14 4.45956 14 3.68934 14.3467 3.12353C14.5407 2.80693 14.8069 2.54074 15.1235 2.34673C15.6893 2 16.4596 2 18 2C19.5404 2 20.3107 2 20.8765 2.34673C21.1931 2.54074 21.4593 2.80693 21.6533 3.12353C22 3.68934 22 4.45956 22 6C22 7.54044 22 8.31066 21.6533 8.87647C21.4593 9.19307 21.1931 9.45926 20.8765 9.65327C20.3107 10 19.5404 10 18 10C16.4596 10 15.6893 10 15.1235 9.65327C14.8069 9.45926 14.5407 9.19307 14.3467 8.87647C14 8.31066 14 7.54044 14 6Z" stroke="currentColor" stroke-width="1.8"/>
+                  </g>
+                </svg>
+              </span>
+                <span class="cabinet-menu__nav-text">Мои организации</span>
+              </a>
+
+              <a href="" class="cabinet-menu__nav-link">
+              <span class="cabinet-menu__nav-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_195_8681)">
+                <path d="M5 8V20H19V8H5ZM5 6H19V4H5V6ZM20 22H4C3.73478 22 3.48043 21.8946 3.29289 21.7071C3.10536 21.5196 3 21.2652 3 21V3C3 2.73478 3.10536 2.48043 3.29289 2.29289C3.48043 2.10536 3.73478 2 4 2H20C20.2652 2 20.5196 2.10536 20.7071 2.29289C20.8946 2.48043 21 2.73478 21 3V21C21 21.2652 20.8946 21.5196 20.7071 21.7071C20.5196 21.8946 20.2652 22 20 22ZM7 10H11V14H7V10ZM7 16H17V18H7V16ZM13 11H17V13H13V11Z"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_195_8681">
+                <rect width="24" height="24" fill="white"/>
+                </clipPath>
+                </defs>
+                </svg>
+              </span>
+                <span class="cabinet-menu__nav-text">Мои документы</span>
+              </a>
+
+              <a href="" class="cabinet-menu__nav-link">
+              <span class="cabinet-menu__nav-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_195_8697)">
+                <path d="M9.97296 18H11V13H13V18H14.027C14.159 16.798 14.772 15.806 15.767 14.723C15.88 14.601 16.599 13.856 16.684 13.75C17.3902 12.8676 17.8329 11.8037 17.9611 10.6807C18.0892 9.55781 17.8976 8.42151 17.4082 7.40271C16.9189 6.38392 16.1517 5.52406 15.1951 4.92215C14.2384 4.32025 13.1313 4.00078 12.001 4.00054C10.8708 4.0003 9.7635 4.31929 8.80662 4.92079C7.84974 5.52228 7.08221 6.38182 6.59242 7.4004C6.10263 8.41899 5.9105 9.55521 6.03815 10.6782C6.1658 11.8012 6.60805 12.8653 7.31396 13.748C7.39996 13.855 8.12096 14.601 8.23196 14.722C9.22796 15.806 9.84096 16.798 9.97296 18ZM9.99996 20V21H14V20H9.99996ZM5.75396 15C4.81215 13.8233 4.22191 12.4044 4.05122 10.9069C3.88054 9.40944 4.13636 7.89418 4.78921 6.53572C5.44207 5.17725 6.46539 4.03085 7.74132 3.22856C9.01724 2.42627 10.4938 2.00074 12.001 2.00098C13.5082 2.00122 14.9847 2.42722 16.2604 3.22992C17.536 4.03262 18.559 5.17935 19.2114 6.53803C19.8638 7.8967 20.1192 9.41204 19.948 10.9095C19.7768 12.4069 19.1861 13.8256 18.244 15.002C17.624 15.774 16 17 16 18.5V21C16 21.5304 15.7892 22.0391 15.4142 22.4142C15.0391 22.7893 14.5304 23 14 23H9.99996C9.46953 23 8.96082 22.7893 8.58575 22.4142C8.21067 22.0391 7.99996 21.5304 7.99996 21V18.5C7.99996 17 6.37496 15.774 5.75396 15Z"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_195_8697">
+                <rect width="24" height="24" fill="white"/>
+                </clipPath>
+                </defs>
+                </svg>
+              </span>
+                <span class="cabinet-menu__nav-text">Уведомления</span>
+              </a>
+            </div>
+          </nav>
+
+          <nav class="cabinet-menu__nav">
+            <h4 class="cabinet-menu__nav-title">Поддержка</h4>
+            <div class="cabinet-menu__nav-list">
+              <a href="" class="cabinet-menu__nav-link">
+            <span class="cabinet-menu__nav-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g>
+              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/>
+              <path d="M10 9C10 7.89543 10.8954 7 12 7C13.1046 7 14 7.89543 14 9C14 9.39815 13.8837 9.76913 13.6831 10.0808C13.0854 11.0097 12 11.8954 12 13V13.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              <path d="M11.992 17H12.001" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+              </svg>
+            </span>
+                <span class="cabinet-menu__nav-text">Помощь</span>
+              </a>
+            </div>
+          </nav>
+        </div>
+      </aside>
+
+      <main class="cabinet-page__main">
+        <h1 class="cabinet-page__title">Сообщения</h1>
+
+        <div class="cabinet-page__content">
+          <div class="section">
+            <table class="table table--fixed table--messages messages">
+              <tbody>
+              <tr>
+                <td class="table__cell-100">
+                  <picture><source srcset="img/new/01.webp" type="image/webp"><img width="100" class="messages__img" src="img/new/01.webp" alt="Кромкооблицовочный станок"></picture>
+                </td>
+                <td class="table__cell">
+                  <p class="messages__name semibold fs16">Полина Belstanok</p>
+                  <p class="fs15">
+                    Четырехсторонний станок Weinig unimat U17A • 1 550 000 ₽
+                  </p>
+                  <p class="fs15 ellipsis gray">
+                    Дополнительно отправляю наши контакты: Тел. +79267095126 Полина (WhatsApp)
+                    Дополнительно отправляю наши контакты: Тел. +79267095126 Полина (WhatsApp)
+                    Дополнительно отправляю наши контакты: Тел. +79267095126 Полина (WhatsApp)
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td class="table__cell-100">
+                  <picture><source srcset="img/new/01.webp" type="image/webp"><img width="100" class="messages__img" src="img/new/01.webp" alt="Кромкооблицовочный станок"></picture>
+                </td>
+                <td class="table__cell">
+                  <p class="messages__name semibold fs16">Полина Belstanok</p>
+                  <p class="fs15">
+                    Ванна антисептирования Meba 12 м - 880 000 ₽
+                  </p>
+                  <p class="fs15 ellipsis gray">
+                    Пропущенный звонок
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td class="table__cell-100">
+                  <picture><source srcset="img/new/01.webp" type="image/webp"><img width="100" class="messages__img" src="img/new/01.webp" alt="Кромкооблицовочный станок"></picture>
+                </td>
+                <td class="table__cell">
+                  <p class="messages__name semibold fs16">Полина Belstanok</p>
+                  <p class="fs15">
+                    Станок брусующий сил - 650 000 ₽
+                  </p>
+                  <p class="fs15 ellipsis gray">
+                    Здравствуйте. Напишите пожалуйста Ваш WhatsApp. Я Вам отправлю подробную информацию. Дополнительно отправляю наши контакты: Тел. +79267095126 Полина (WhatsApp)
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td class="table__cell-100">
+                  <picture><source srcset="img/new/01.webp" type="image/webp"><img width="100" class="messages__img" src="img/new/01.webp" alt="Кромкооблицовочный станок"></picture>
+                </td>
+                <td class="table__cell">
+                  <p class="messages__name semibold fs16">Полина Belstanok</p>
+                  <p class="fs15">
+                    Экструдер для производства пленки пнд, пвд • 490 000 ₽
+                  </p>
+                  <p class="fs15 ellipsis gray">
+                    Дополнительно отправляю наши контакты: Тел. +79267095126 Полина (WhatsApp)
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td class="table__cell-100">
+                  <picture><source srcset="img/new/01.webp" type="image/webp"><img width="100" class="messages__img" src="img/new/01.webp" alt="Кромкооблицовочный станок"></picture>
+                </td>
+                <td class="table__cell">
+                  <p class="messages__name semibold fs16">Полина Belstanok</p>
+                  <p class="fs15">
+                    Обрабатывающий центр DMG mori CTX Beta 1250 TC • 12 800 000 ₽
+                  </p>
+                  <p class="fs15 ellipsis gray">
+                    Здравствуйте. Напишите пожалуйста Ваш WhatsApp. Я Вам отправлю подробную информацию. Дополнительно отправляю наши контакты: Тел. +79267095126 Полина (WhatsApp)
+
+                  </p>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__top">
+        <div class="footer__column">
+          <a class="footer__logo" href="#"><img src="img/footer/logo.svg" alt="#"></a>
+          <p class="footer__text">БУ станки и промышленное
+            оборудование продажа и
+            подбор</p>
+          <div class="footer__links">
+            <a href="#" class="footer__link">Сотрудничество</a>
+            <a href="#" class="footer__link">Разместить рекламу</a>
+          </div>
+        </div>
+        <div data-spollers="480,max" class="footer__column">
+          <h3 data-spoller class="footer__title">О компании</h3>
+          <nav>
+            <ul class="footer__list">
+              <li><a href="#">Реквизиты</a></li>
+              <li><a href="#">О нас</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div data-spollers="480,max" class="footer__column">
+          <h3 data-spoller class="footer__title"> Доставка и оплата</h3>
+
+          <nav>
+            <ul class="footer__list">
+              <li><a href="#">Способы доставки</a></li>
+              <li><a href="#">Способы оплаты</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div data-spollers="480,max" class="footer__column">
+          <h3 data-spoller class="footer__title">
+            Наши контакты:
+          </h3>
+          <div class="footer__column-body">
+            <a class="footer__phone" href="tel:">
+              <picture><source srcset="img/footer/phone.webp" type="image/webp"><img src="img/footer/phone.png" alt="#"></picture>
+              +7 (926) 709-51-26
+            </a>
+            <a href="malito:" class="footer__mail">
+              <picture><source srcset="img/footer/message.webp" type="image/webp"><img src="img/footer/message.png" alt="#"></picture>
+              belstanok@info.ru
+            </a>
+            <div class="footer__local">
+              <picture><source srcset="img/footer/local.webp" type="image/webp"><img src="img/footer/local.png" alt="#"></picture>
+              <p>Минск, ул. Академика Купревича,
+                1/3-9, каб. 436, 220141</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__main">
+        <div class="footer__social">
+          <a class="footer__social-link" href="#"><picture><source srcset="img/footer/vk.webp" type="image/webp"><img src="img/footer/vk.png" alt="#"></picture></a>
+          <a class="footer__social-link" href="#"><picture><source srcset="img/footer/youtube.webp" type="image/webp"><img src="img/footer/youtube.png" alt="#"></picture></a>
+          <a class="footer__social-link" href="#"><picture><source srcset="img/footer/teleg-2.webp" type="image/webp"><img src="img/footer/teleg-2.png" alt="#"></picture></a>
+          <a class="footer__social-link" href="#"><picture><source srcset="img/footer/whatsap.webp" type="image/webp"><img src="img/footer/whatsap.png" alt="#"></picture></a>
+          <a class="footer__social-link" href="#"><picture><source srcset="img/footer/dzen.webp" type="image/webp"><img src="img/footer/dzen.png" alt="#"></picture></a>
+          <a class="footer__social-link" href="#"><picture><source srcset="img/footer/inst.webp" type="image/webp"><img src="img/footer/inst.png" alt="#"></picture></a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <picture><source srcset="img/footer/viza.webp" type="image/webp"><img src="img/footer/viza.png" alt="#"></picture>
+      </div>
+    </div>
+  </footer>
+</div>
+<script src="js/app.min.js?_v=202505311400"></script>
+<script src="js/cabinet.js?_v=202505311400"></script>
+</body>
+
+</html>
